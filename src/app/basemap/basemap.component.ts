@@ -254,7 +254,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
                 csLayer["source"]["data"]
             );
         }
-    };
+    }
 
     showMapLegend(layer: CsLayer) {
         // Activate the potential legend for the layer

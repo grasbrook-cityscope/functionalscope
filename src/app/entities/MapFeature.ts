@@ -40,10 +40,11 @@ export class MapFeature {
     os_type = null;
 
     bld_numLevels = 1;
-    bld_useGround = null;
-    bld_useUpper = null;
+    bld_useGround = BuildingUse.residential;
+    bld_useUpper = BuildingUse.residential;
 
     public static fillGridCellByFeature(gridCell, feature) {
+        console.log("fillfeature",feature,gridCell)
         const featureProps = feature['properties'];
         for (let property of Object.keys(featureProps)) {
             if (property !== 'id') {
@@ -91,6 +92,8 @@ export class MapFeature {
     }
 
     public static fillFeatureByGridCell(feature, gridCell: MapFeature) {
+        /**  used when setting new properties in editmenu*/
+        console.log("fillfeature",feature,gridCell)
         for (let gridCellKey of Object.keys(gridCell)) {
             if (gridCellKey === 'bld_numLevels') {
                 feature.properties['height'] = MapFeature.bld_lvl_to_height(gridCell[gridCellKey]);
@@ -99,11 +102,11 @@ export class MapFeature {
 
                 // building
                 const map = {
-                    WO: 'residential',
-                    GE: 'commercial',
-                    SK: 'special'
+                    WO: BuildingUse.residential,
+                    GE: BuildingUse.commercial,
+                    SK: BuildingUse.special
                 };
-                let color = BuildingUse[Object.keys(BuildingUse)[map[gridCell[gridCellKey]]]];
+                let color = map[gridCell[gridCellKey]];
 
                 feature.properties['changedTypeColor'] = color;
             } else {
@@ -113,6 +116,7 @@ export class MapFeature {
     }
 
     public static fillFeatureByCityIOType(feature, typeDict) {
+        console.log("fillfeaturecityio",feature,typeDict,)
         for (let gridCellKey of Object.keys(typeDict)) {
             if (gridCellKey === 'bld_numLevels') {
                 feature.properties['height'] = MapFeature.bld_lvl_to_height(typeDict[gridCellKey]);
