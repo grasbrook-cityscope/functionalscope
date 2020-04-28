@@ -1,0 +1,87 @@
+#cell-menu {
+  position: absolute;
+  /* padding: 1px; */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+
+  ::ng-deep.mat-tab-body {
+    padding: 10px 20px;
+    background-color: white;
+  }
+  ::ng-deep.mat-tab-label {
+    min-width: 130px;
+  }
+
+  ::ng-deep.mat-slider-thumb {
+    background-color: rgba(0,0,0,.54)
+  }
+
+  ::ng-deep.mat-tab-label-content {
+    padding: 6px 22px;
+    background-color: white;
+    border-radius: 5px;
+
+  }
+
+  ::ng-deep.mat-radio-group {
+    float: right;
+  }
+
+  ::ng-deep.mat-checkbox {
+    margin-left: 15px;
+  }
+
+  ::ng-deep.mat-radio-button {
+    margin-left: 15px;
+  }
+
+  .category_header {
+    font-size: 1.3rem;
+    padding-bottom: 5px;
+  }
+
+  .checkbox-holder {
+    label {
+      padding-bottom: 0;
+      margin-bottom: 2px;
+    }
+  }
+
+
+  span {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  .close {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    cursor: pointer;
+  }
+
+  .bottom-menu {
+    height: 40px;
+    padding-top: 5px;
+    margin-bottom: 7px;
+
+    .row {
+      margin: 0 !important;
+      flex-wrap: nowrap;
+    }
+
+    button {
+      background: white;
+      border: 1px solid lightgray;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  #cell-menu {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+}

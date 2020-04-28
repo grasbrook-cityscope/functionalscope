@@ -1,0 +1,46 @@
+<div *ngIf="layer" [hidden]="!visible" class="legend">
+  <div class="legend-title">{{ layer.displayName }}:</div>
+  <span
+    (click)="onClose()" i18n
+    class="close">
+    <i
+      class="material-icons menu-icons white"
+      matTooltipPosition="right"
+      matTooltip="Close Legend">
+      close
+    </i>
+  </span>
+  <div class="legend-container">
+    <ng-container
+      *ngIf="legend.url || legend.html || legend.styleValues; else noLegend">
+        <label *ngIf="legend.description">{{ legend.description }}</label>
+        <div *ngIf="legend.url"><img src="{{ legend.url }}" /></div>
+        <div *ngIf="legend.html" [innerHTML]="legend.html"></div>
+        <table *ngIf="legend.styleValues" class="legend-table">
+          <tr *ngFor="let value of legend.styleValues; let i = index">
+            <td class="color-field">
+              <span 
+                [class]="legend.type"
+                [style.background-color]="value.color" >
+              </span>
+            </td>
+            <td>{{value.label}}</td>
+          </tr>
+        </table>
+        <ng-container *ngIf="legend.credits">
+
+          <ng-container *ngIf="legend.credits.length; else singleLineCredits">
+              <small *ngFor="let string of legend.credits">{{string}}</small>
+          </ng-container>
+          
+          <ng-template #singleLineCredits>
+              <small>{{string}}</small>
+          </ng-template>
+
+        </ng-container>
+    </ng-container>
+    <ng-template #noLegend>
+        <div i18n>Legend not available</div>
+    </ng-template>
+  </div>
+</div>

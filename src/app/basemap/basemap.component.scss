@@ -1,0 +1,117 @@
+@import "../../variables.scss";
+
+.app-container {
+  height: 100%;
+  width: 100%;
+}
+
+#basemap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#basemap
+  .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
+#basemap .mapboxgl-canvas-container {
+  position: absolute;
+}
+
+#basemap
+  .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan
+  canvas,
+#basemap .mapboxgl-canvas-container canvas {
+  position: relative;
+}
+
+.container-left-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: 5px;
+}
+
+app-map-setting {
+  position: absolute;
+  top: 30px;
+  left: 5px;
+}
+
+app-file-setting {
+  position: absolute;
+  top: 30px;
+  right: 5px;
+}
+
+app-file-setting.save {
+  top: 69px;
+}
+
+ng::deep .popUpContent {
+  font-size: 8px;
+}
+
+.feature-hover-tooltip {
+  border-radius: 4px;
+  padding: 5px;
+  position: fixed;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+
+/*
+    Responsive Design
+*/
+
+
+@media screen and (max-width: $screen-sm-width), (max-height: $screen-menu-change-height) {
+  app-file-setting {
+    top: 5px !important;
+  }
+
+  app-map-setting {
+    right: 5px !important;
+    left: auto;
+    top: 117px;
+  }
+}
+
+
+@media screen and (min-width: 580px) {
+  app-edit-menu {
+    left: 10%;
+  }
+}
+
+@media screen and (min-height: 430px) {
+  app-edit-menu {
+    top: 10%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  app-edit-menu {
+    left: 25%;
+  }
+}
+
+@media screen and (min-height: 520px) {
+  app-edit-menu {
+    top: 25%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  app-edit-menu {
+    left: 40%;
+  }
+}
+
+@media screen and (min-height: 650px) {
+  app-edit-menu {
+    top: 40%;
+  }
+}

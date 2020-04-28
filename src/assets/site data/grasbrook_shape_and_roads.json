@@ -1,0 +1,4483 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "DLM250_Siedlung.488",
+      "geometry_name": "the_geom",
+      "properties": {
+        "id": "DLM250_Siedlung.488",
+        "LAND": "DE",
+        "MODELLART": "DLM250",
+        "OBJART": "41002",
+        "OBJART_TXT": "AX_IndustrieUndGewerbeflaeche",
+        "OBJID": "DEBKGDL20000R2R6",
+        "HDU_X": 0,
+        "BEGINN": "2018/12/31 08:00:00+00",
+        "ENDE": "",
+        "AGT": "",
+        "FKT": "",
+        "NAM": "",
+        "RGS": "",
+        "ZUS": "",
+        "BEMERKUNG": "",
+        "bbox": [
+          566522.71126451,
+          5930961.84508067,
+          567632.34831927,
+          5932291.8137454
+        ],
+        "eisenbahn": null,
+        "fuss": null,
+        "hauptverk": null,
+        "sonderform": null,
+        "hauptsaml": null,
+        "anlieger": null,
+        "name": null
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                10.011181615743379,
+                53.52330864363829
+              ],
+              [
+                10.010668926496741,
+                53.523306611481615
+              ],
+              [
+                10.010306626530408,
+                53.52334111897479
+              ],
+              [
+                10.01107977116028,
+                53.52394438977268
+              ],
+              [
+                10.01158870380743,
+                53.524477553553574
+              ],
+              [
+                10.013493900526887,
+                53.52647286626829
+              ],
+              [
+                10.015004229709325,
+                53.52808640648976
+              ],
+              [
+                10.016405553507198,
+                53.52956563611681
+              ],
+              [
+                10.015159244432514,
+                53.53043240249192
+              ],
+              [
+                10.010014560953332,
+                53.532665387956825
+              ],
+              [
+                10.008193439201845,
+                53.53426887809589
+              ],
+              [
+                10.00371679849584,
+                53.535320306697585
+              ],
+              [
+                10.007663786642933,
+                53.53501210566129
+              ],
+              [
+                10.010470808588854,
+                53.53465589262701
+              ],
+              [
+                10.012605094396912,
+                53.53429696096669
+              ],
+              [
+                10.014571545555725,
+                53.533903934600936
+              ],
+              [
+                10.01651067060306,
+                53.53344397421905
+              ],
+              [
+                10.020387362379463,
+                53.53230397551923
+              ],
+              [
+                10.020054425528706,
+                53.53193498676247
+              ],
+              [
+                10.014159639765616,
+                53.52536925848205
+              ],
+              [
+                10.013133458836128,
+                53.524349540288384
+              ],
+              [
+                10.012697908995124,
+                53.523916717005086
+              ],
+              [
+                10.01226410999563,
+                53.52360048592711
+              ],
+              [
+                10.011919090174336,
+                53.52343736993722
+              ],
+              [
+                10.011558292653651,
+                53.523337093944555
+              ],
+              [
+                10.011181615743379,
+                53.52330864363829
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "lower_main_road",
+      "properties": {
+        "id": "1",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 1,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "hauptverkehrsstrasse"
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              10.015457550547534,
+              53.52164912788151
+            ],
+            [
+              10.015455857216391,
+              53.52209248539166
+            ],
+            [
+              10.015211883445634,
+              53.52243164461509
+            ],
+            [
+              10.0146168137837,
+              53.52274447139458
+            ],
+            [
+              10.013844188460428,
+              53.522831633453684
+            ],
+            [
+              10.012150188360803,
+              53.52282766634209
+            ]
+          ],
+          [
+            [
+              10.012150188360803,
+              53.52282766634209
+            ],
+            [
+              10.01151083802499,
+              53.52282208518703
+            ],
+            [
+              10.008142440160507,
+              53.52334860959034
+            ]
+          ],
+          [
+            [
+              10.008142440160507,
+              53.52334860959034
+            ],
+            [
+              9.989358740483434,
+              53.526297702597134
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "railroad",
+      "properties": {
+        "id": "101",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 1,
+        "fuss": 0,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "eisenbahn"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.02395112752011,
+            53.53433870493158
+          ],
+          [
+            10.017035874992663,
+            53.526870172568394
+          ],
+          [
+            10.015354454258535,
+            53.52497990120305
+          ],
+          [
+            10.012794119437741,
+            53.52132853221211
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "upper_main_road",
+      "properties": {
+        "id": "1",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 1,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "hauptverkehrsstrasse"
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              10.023397973919295,
+              53.53447321418427
+            ],
+            [
+              10.02099446442756,
+              53.53182702811132
+            ]
+          ],
+          [
+            [
+              10.019431111418623,
+              53.53036332168249
+            ],
+            [
+              10.018122799167815,
+              53.52908088698374
+            ]
+          ],
+          [
+            [
+              10.02099446442756,
+              53.53182702811132
+            ],
+            [
+              10.019431111418623,
+              53.53036332168249
+            ]
+          ],
+          [
+            [
+              10.018122799167815,
+              53.52908088698374
+            ],
+            [
+              10.016699836152219,
+              53.527503017685206
+            ]
+          ],
+          [
+            [
+              10.014055671729473,
+              53.52460687566695
+            ],
+            [
+              10.013373992610182,
+              53.52386886523779
+            ],
+            [
+              10.012875647270658,
+              53.52359828876773
+            ],
+            [
+              10.012186043066789,
+              53.5233000176415
+            ],
+            [
+              10.012150188360803,
+              53.52282766634209
+            ]
+          ],
+          [
+            [
+              10.016699836152219,
+              53.527503017685206
+            ],
+            [
+              10.014055671729473,
+              53.52460687566695
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "DLM250_Siedlung.483",
+      "geometry_name": "the_geom",
+      "properties": {
+        "id": "DLM250_Siedlung.483",
+        "LAND": "DE",
+        "MODELLART": "DLM250",
+        "OBJART": "41002",
+        "OBJART_TXT": "AX_IndustrieUndGewerbeflaeche",
+        "OBJID": "DEBKGDL20000R2XS",
+        "HDU_X": 0,
+        "BEGINN": "2018/12/31 08:00:00+00",
+        "ENDE": "",
+        "AGT": "",
+        "FKT": "",
+        "NAM": "",
+        "RGS": "",
+        "ZUS": "",
+        "BEMERKUNG": "",
+        "bbox": [
+          565799.2558698,
+          5931094.3008972,
+          567190.20256722,
+          5932323.21275387
+        ],
+        "eisenbahn": null,
+        "fuss": null,
+        "hauptverk": null,
+        "sonderform": null,
+        "hauptsaml": null,
+        "anlieger": null,
+        "name": null
+      },
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                10.001753527162272,
+                53.535528063598115
+              ],
+              [
+                10.007303750462794,
+                53.53307423643635
+              ],
+              [
+                10.013366469241504,
+                53.530387558466316
+              ],
+              [
+                10.013231901017367,
+                53.530146244764026
+              ],
+              [
+                10.013100462289941,
+                53.529759321686704
+              ],
+              [
+                10.013212122048337,
+                53.5292116066544
+              ],
+              [
+                10.013626694711238,
+                53.52854826539263
+              ],
+              [
+                10.009941558004654,
+                53.52450340903393
+              ],
+              [
+                10.008983326679221,
+                53.524757400188264
+              ],
+              [
+                10.008995701190424,
+                53.52594190696176
+              ],
+              [
+                10.000913541569213,
+                53.529818470521896
+              ],
+              [
+                10.000590892660766,
+                53.530338362618586
+              ],
+              [
+                9.99878282959898,
+                53.53149923285479
+              ],
+              [
+                9.992787509226028,
+                53.53475468066717
+              ],
+              [
+                9.994347222150882,
+                53.53553388745988
+              ],
+              [
+                9.997994706375406,
+                53.53314948034003
+              ],
+              [
+                9.99877395674593,
+                53.53359296823458
+              ],
+              [
+                9.999972771158983,
+                53.5342807770195
+              ],
+              [
+                9.999936348174703,
+                53.534828783147155
+              ],
+              [
+                9.996774288988878,
+                53.53566062659197
+              ],
+              [
+                9.998765905617407,
+                53.535614814061915
+              ],
+              [
+                10.001753527162272,
+                53.535528063598115
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 0,
+      "properties": {
+        "id": "79",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.014055671729473,
+            53.52460687566695
+          ],
+          [
+            10.015742255351732,
+            53.52416936809484
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "id": "78",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.012101093572133,
+            53.52740565035829
+          ],
+          [
+            10.012907458210107,
+            53.527187312372995
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "id": "81",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.012610780035015,
+            53.53002190188767
+          ],
+          [
+            10.012994060369085,
+            53.529817250530186
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "id": "80",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.010840701544119,
+            53.5260278500845
+          ],
+          [
+            10.011622314143965,
+            53.52577815607689
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "id": "76",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.008289679676567,
+            53.53268716660413
+          ],
+          [
+            10.007647920227226,
+            53.532188116483404
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "id": "27",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.013644114010773,
+            53.5326505831476
+          ],
+          [
+            10.011567572428383,
+            53.53350338896512
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "id": "77",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01041575272396,
+            53.53250793635775
+          ],
+          [
+            10.008898928785376,
+            53.533122504189556
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "id": "74",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.00682753056606,
+            53.53329237621915
+          ],
+          [
+            10.006182599877484,
+            53.53277508130201
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "id": "100",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.011701847252963,
+            53.529337360170466
+          ],
+          [
+            10.012610780035015,
+            53.53002190188767
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "id": "75",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.018457428842215,
+            53.531512903409286
+          ],
+          [
+            10.017761480882276,
+            53.53177398254717
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "id": "72",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.017123298493674,
+            53.531218665376855
+          ],
+          [
+            10.017761480882276,
+            53.53177398254717
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "id": "71",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.012731521208025,
+            53.53377962307344
+          ],
+          [
+            10.012892363004235,
+            53.533801895361535
+          ],
+          [
+            10.013416683605145,
+            53.53383523760463
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "id": "73",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01240991851873,
+            53.531687968617554
+          ],
+          [
+            10.01041575272396,
+            53.53250793635775
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "id": "99",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.010840701544119,
+            53.5260278500845
+          ],
+          [
+            10.01020581772072,
+            53.52533356294658
+          ],
+          [
+            10.009426616503722,
+            53.52461649725752
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "id": "70",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.011369921441982,
+            53.53435384573946
+          ],
+          [
+            10.012226049400965,
+            53.53419706511052
+          ],
+          [
+            10.01289190602851,
+            53.53400822737396
+          ],
+          [
+            10.013416683605145,
+            53.53383523760463
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "id": "26",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.009426616503722,
+            53.52461649725752
+          ],
+          [
+            10.009335936498593,
+            53.524435904282846
+          ],
+          [
+            10.009165034923724,
+            53.52423033151572
+          ],
+          [
+            10.008841434224193,
+            53.5239381113135
+          ],
+          [
+            10.008317396247218,
+            53.523620100879775
+          ],
+          [
+            10.008142440160507,
+            53.52334860959034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "properties": {
+        "id": "25",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.012151449746709,
+            53.52913177815877
+          ],
+          [
+            10.011701847252963,
+            53.529337360170466
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "properties": {
+        "id": "67",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.012151449746709,
+            53.52913177815877
+          ],
+          [
+            10.01285914627016,
+            53.529494703081525
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "properties": {
+        "id": "66",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.012994060369085,
+            53.529817250530186
+          ],
+          [
+            10.012874672345786,
+            53.52964605453588
+          ],
+          [
+            10.01285914627016,
+            53.529494703081525
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "properties": {
+        "id": "69",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01285914627016,
+            53.529494703081525
+          ],
+          [
+            10.012825006632891,
+            53.52923977264771
+          ],
+          [
+            10.012969793956334,
+            53.52886481936292
+          ],
+          [
+            10.013065034078503,
+            53.52872681328639
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "properties": {
+        "id": "68",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01240991851873,
+            53.531687968617554
+          ],
+          [
+            10.013071110928408,
+            53.53220299189127
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "properties": {
+        "id": "24",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.0110833146541,
+            53.53302373856826
+          ],
+          [
+            10.011567572428383,
+            53.53350338896512
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "properties": {
+        "id": "65",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.013071110928408,
+            53.53220299189127
+          ],
+          [
+            10.013644114010773,
+            53.5326505831476
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "properties": {
+        "id": "22",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01041575272396,
+            53.53250793635775
+          ],
+          [
+            10.0110833146541,
+            53.53302373856826
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "properties": {
+        "id": "21",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.016699836152219,
+            53.527503017685206
+          ],
+          [
+            10.013989113353738,
+            53.52831745859363
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "properties": {
+        "id": "23",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.013989113353738,
+            53.52831745859363
+          ],
+          [
+            10.013246426432483,
+            53.528646772437234
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "properties": {
+        "id": "64",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.008289679676567,
+            53.53268716660413
+          ],
+          [
+            10.009838329615052,
+            53.53205572148732
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "properties": {
+        "id": "62",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.020426148137926,
+            53.53199332400508
+          ],
+          [
+            10.023005705241475,
+            53.53472024536285
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "properties": {
+        "id": "61",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.017761480882276,
+            53.53177398254717
+          ],
+          [
+            10.018317895709675,
+            53.532248910265984
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "properties": {
+        "id": "63",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.018317895709675,
+            53.532248910265984
+          ],
+          [
+            10.018518024833963,
+            53.53241973042351
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "properties": {
+        "id": "98",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.012610780035015,
+            53.53002190188767
+          ],
+          [
+            10.01111279176568,
+            53.53070349873926
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "properties": {
+        "id": "59",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.010719826120347,
+            53.53040522965858
+          ],
+          [
+            10.01111279176568,
+            53.53070349873926
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "properties": {
+        "id": "58",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.009733683940455,
+            53.5342582961776
+          ],
+          [
+            10.009863787449206,
+            53.53438123119484
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "properties": {
+        "id": "60",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.009863787449206,
+            53.53438123119484
+          ],
+          [
+            10.011369921441982,
+            53.53435384573946
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "properties": {
+        "id": "20",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.013246426432483,
+            53.528646772437234
+          ],
+          [
+            10.013065034078503,
+            53.52872681328639
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "properties": {
+        "id": "97",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.018938706421334,
+            53.530508134130315
+          ],
+          [
+            10.018816651941762,
+            53.53038836547741
+          ],
+          [
+            10.017952912164274,
+            53.52961865898468
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "properties": {
+        "id": "55",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.015956311165752,
+            53.530239696424175
+          ],
+          [
+            10.01395531133668,
+            53.5310568626829
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "properties": {
+        "id": "57",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01395531133668,
+            53.5310568626829
+          ],
+          [
+            10.01240991851873,
+            53.531687968617554
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "properties": {
+        "id": "56",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.018122799167815,
+            53.52908088698374
+          ],
+          [
+            10.016032347284442,
+            53.529819523695465
+          ],
+          [
+            10.015975268550426,
+            53.53013493863034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "properties": {
+        "id": "54",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.015975268550426,
+            53.53013493863034
+          ],
+          [
+            10.015956311165752,
+            53.530239696424175
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "properties": {
+        "id": "53",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01285914627016,
+            53.529494703081525
+          ],
+          [
+            10.013588754323237,
+            53.529789883328476
+          ],
+          [
+            10.014405136964998,
+            53.529984479333805
+          ],
+          [
+            10.01548397561198,
+            53.53009623333407
+          ],
+          [
+            10.015975268550426,
+            53.53013493863034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "properties": {
+        "id": "95",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01111279176568,
+            53.53070349873926
+          ],
+          [
+            10.009201469725483,
+            53.53157316581988
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "properties": {
+        "id": "96",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.009201469725483,
+            53.53157316581988
+          ],
+          [
+            10.007647920227226,
+            53.532188116483404
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "properties": {
+        "id": "52",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.018518024833963,
+            53.53241973042351
+          ],
+          [
+            10.019169509331105,
+            53.5322749477315
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "properties": {
+        "id": "49",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.019169509331105,
+            53.5322749477315
+          ],
+          [
+            10.019279151641332,
+            53.53225500616002
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "properties": {
+        "id": "48",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.019279151641332,
+            53.53225500616002
+          ],
+          [
+            10.019723536367904,
+            53.53216946451684
+          ],
+          [
+            10.020426148137926,
+            53.53199332400508
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "properties": {
+        "id": "51",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.018317895709675,
+            53.532248910265984
+          ],
+          [
+            10.018467131168538,
+            53.53228837483949
+          ],
+          [
+            10.018792039102545,
+            53.53231850411201
+          ],
+          [
+            10.019169509331105,
+            53.5322749477315
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "properties": {
+        "id": "50",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.019169509331105,
+            53.5322749477315
+          ],
+          [
+            10.019279151641332,
+            53.53225500616002
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "properties": {
+        "id": "18",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.018643340585816,
+            53.530593538581286
+          ],
+          [
+            10.017123298493674,
+            53.531218665376855
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "properties": {
+        "id": "46",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.015975268550426,
+            53.53013493863034
+          ],
+          [
+            10.016722368395602,
+            53.5301937970396
+          ],
+          [
+            10.017619579634676,
+            53.53029608412506
+          ],
+          [
+            10.018305996316466,
+            53.53045511973274
+          ],
+          [
+            10.018643340585816,
+            53.530593538581286
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "properties": {
+        "id": "47",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.018643340585816,
+            53.530593538581286
+          ],
+          [
+            10.019349232642298,
+            53.53093995298944
+          ],
+          [
+            10.020426148137926,
+            53.53199332400508
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "properties": {
+        "id": "19",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.017123298493674,
+            53.531218665376855
+          ],
+          [
+            10.015188696865087,
+            53.5320152005297
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "properties": {
+        "id": "17",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.015188696865087,
+            53.5320152005297
+          ],
+          [
+            10.013644114010773,
+            53.5326505831476
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "properties": {
+        "id": "94",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.016579467857978,
+            53.530757663233096
+          ],
+          [
+            10.014613297768479,
+            53.53156811669538
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "properties": {
+        "id": "45",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01395531133668,
+            53.5310568626829
+          ],
+          [
+            10.014613297768479,
+            53.53156811669538
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "properties": {
+        "id": "44",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.014613297768479,
+            53.53156811669538
+          ],
+          [
+            10.015188696865087,
+            53.5320152005297
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "properties": {
+        "id": "16",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.018122799167815,
+            53.52908088698374
+          ],
+          [
+            10.020678654907847,
+            53.52834824719819
+          ],
+          [
+            10.02117629187503,
+            53.52832934211818
+          ],
+          [
+            10.021919962206491,
+            53.52856847575974
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "properties": {
+        "id": "93",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.0110833146541,
+            53.53302373856826
+          ],
+          [
+            10.009202284116418,
+            53.533815891895145
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "properties": {
+        "id": "92",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.011567572428383,
+            53.53350338896512
+          ],
+          [
+            10.009733683940455,
+            53.5342582961776
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "properties": {
+        "id": "91",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.009202284116418,
+            53.533815891895145
+          ],
+          [
+            10.009733683940455,
+            53.5342582961776
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "properties": {
+        "id": "41",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.011567572428383,
+            53.53350338896512
+          ],
+          [
+            10.011578874167242,
+            53.53405890897399
+          ],
+          [
+            10.011369921441982,
+            53.53435384573946
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "properties": {
+        "id": "43",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01124986817097,
+            53.527774238937134
+          ],
+          [
+            10.012646291618632,
+            53.52891419857933
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "properties": {
+        "id": "42",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01124986817097,
+            53.527774238937134
+          ],
+          [
+            10.012101093572133,
+            53.52740565035829
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "properties": {
+        "id": "90",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.013246426432483,
+            53.528646772437234
+          ],
+          [
+            10.012101093572133,
+            53.52740565035829
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "properties": {
+        "id": "89",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.012101093572133,
+            53.52740565035829
+          ],
+          [
+            10.010840701544119,
+            53.5260278500845
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "properties": {
+        "id": "40",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.005065885552646,
+            53.53401722361521
+          ],
+          [
+            10.00682753056606,
+            53.53329237621915
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "properties": {
+        "id": "39",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.00682753056606,
+            53.53329237621915
+          ],
+          [
+            10.008289679676567,
+            53.53268716660413
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "properties": {
+        "id": "88",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.007647920227226,
+            53.532188116483404
+          ],
+          [
+            10.006182599877484,
+            53.53277508130201
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "properties": {
+        "id": "87",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.006182599877484,
+            53.53277508130201
+          ],
+          [
+            10.004515597228803,
+            53.533443444492306
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "properties": {
+        "id": "38",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.020426148137926,
+            53.53199332400508
+          ],
+          [
+            10.02099446442756,
+            53.53182702811132
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "properties": {
+        "id": "37",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.02099446442756,
+            53.53182702811132
+          ],
+          [
+            10.021974203211224,
+            53.53150689741573
+          ],
+          [
+            10.02184915248851,
+            53.53091080697293
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "properties": {
+        "id": "86",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.014613297768479,
+            53.53156811669538
+          ],
+          [
+            10.013071110928408,
+            53.53220299189127
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "properties": {
+        "id": "85",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.013071110928408,
+            53.53220299189127
+          ],
+          [
+            10.0110833146541,
+            53.53302373856826
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "properties": {
+        "id": "36",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.013644114010773,
+            53.5326505831476
+          ],
+          [
+            10.01431688832154,
+            53.53318318015754
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "properties": {
+        "id": "35",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01431688832154,
+            53.53318318015754
+          ],
+          [
+            10.014801910566394,
+            53.53356713384015
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "properties": {
+        "id": "84",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.01431688832154,
+            53.53318318015754
+          ],
+          [
+            10.013242424127649,
+            53.53362270871642
+          ],
+          [
+            10.012731521208025,
+            53.53377962307344
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "properties": {
+        "id": "13",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.009201469725483,
+            53.53157316581988
+          ],
+          [
+            10.009838329615052,
+            53.53205572148732
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "properties": {
+        "id": "15",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.009838329615052,
+            53.53205572148732
+          ],
+          [
+            10.01041575272396,
+            53.53250793635775
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "properties": {
+        "id": "14",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.019431111418623,
+            53.53036332168249
+          ],
+          [
+            10.018938706421334,
+            53.530508134130315
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "properties": {
+        "id": "12",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.018938706421334,
+            53.530508134130315
+          ],
+          [
+            10.018643340585816,
+            53.530593538581286
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "properties": {
+        "id": "33",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.015188696865087,
+            53.5320152005297
+          ],
+          [
+            10.015867999761712,
+            53.532548637612564
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "properties": {
+        "id": "34",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.015867999761712,
+            53.532548637612564
+          ],
+          [
+            10.016607308849217,
+            53.53312917603594
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "properties": {
+        "id": "83",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.017761480882276,
+            53.53177398254717
+          ],
+          [
+            10.015867999761712,
+            53.532548637612564
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "properties": {
+        "id": "82",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 1,
+        "name": "anliegerstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.015867999761712,
+            53.532548637612564
+          ],
+          [
+            10.01431688832154,
+            53.53318318015754
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "properties": {
+        "id": "31",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.017123298493674,
+            53.531218665376855
+          ],
+          [
+            10.016579467857978,
+            53.530757663233096
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "properties": {
+        "id": "32",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.016579467857978,
+            53.530757663233096
+          ],
+          [
+            10.015956311165752,
+            53.530239696424175
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "properties": {
+        "id": "11",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.013065034078503,
+            53.52872681328639
+          ],
+          [
+            10.012646291618632,
+            53.52891419857933
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "properties": {
+        "id": "10",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 1,
+        "anlieger": 0,
+        "name": "hauptsammelstrasse"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.012646291618632,
+            53.52891419857933
+          ],
+          [
+            10.012151449746709,
+            53.52913177815877
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "properties": {
+        "id": "28",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.013416683605145,
+            53.53383523760463
+          ],
+          [
+            10.013485996781942,
+            53.53389861695659
+          ],
+          [
+            10.014801910566394,
+            53.53356713384015
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "properties": {
+        "id": "30",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.014801910566394,
+            53.53356713384015
+          ],
+          [
+            10.015345412901608,
+            53.53347812490274
+          ],
+          [
+            10.015951247470959,
+            53.53335206743171
+          ],
+          [
+            10.016512633469613,
+            53.533167760967025
+          ],
+          [
+            10.016607308849217,
+            53.53312917603594
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "properties": {
+        "id": "29",
+        "LAND": null,
+        "MODELLART": null,
+        "OBJART": null,
+        "OBJART_TXT": null,
+        "OBJID": null,
+        "HDU_X": null,
+        "BEGINN": null,
+        "ENDE": null,
+        "AGT": null,
+        "FKT": null,
+        "NAM": null,
+        "RGS": null,
+        "ZUS": null,
+        "BEMERKUNG": null,
+        "bbox": null,
+        "eisenbahn": 0,
+        "fuss": 1,
+        "hauptverk": 0,
+        "sonderform": 0,
+        "hauptsaml": 0,
+        "anlieger": 0,
+        "name": "fuss und radweg"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            10.016607308849217,
+            53.53312917603594
+          ],
+          [
+            10.017127772621365,
+            53.53291704284853
+          ],
+          [
+            10.017828282784214,
+            53.532636282959665
+          ],
+          [
+            10.018518024833963,
+            53.53241973042351
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "mapCenter": [10.0143909533867, 53.53128461384861],
+  "isShowPopUp": false,
+  "mapZoom": 15,
+  "bearing": 34.8,
+  "pitch": 30,
+  "gridZoom": 16.3,
+  "gridBearing": 34.8,
+  "gridPitch": 0,
+  "mapStyle": "mapbox://styles/relnox/cjs9rb33k2pix1fo833uweyjd?fresh=true&optimize=true",
+  "layers": [
+    {
+      "id": "3d Buildings",
+      "displayName": "3d Buildings",
+      "loadFromCityIo": false,
+      "source": "composite",
+      "source-layer": "building",
+      "filter": ["==", "extrude", "true"],
+      "type": "fill-extrusion",
+      "minzoom": 15,
+      "paint": {
+        "fill-extrusion-color": "#fff",
+        "fill-extrusion-height": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          10,
+          0,
+          15.05,
+          ["get", "height"]
+        ],
+        "fill-extrusion-base": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          15,
+          0,
+          15.05,
+          ["get", "min_height"]
+        ],
+        "fill-extrusion-opacity": 0.8
+      },
+      "showInLayerList": false,
+      "isLoading": false,
+      "addOnMapInitialisation": false
+    },
+    {
+      "id": "grid",
+      "showInLayerList": true,
+      "isLoading": false,
+      "addOnMapInitialisation": true,
+      "loadFromCityIo": false
+    },
+    {
+      "id": "restrictions",
+      "displayName": "Restrictions",
+      "showInLayerList": true,
+      "loadFromCityIo": false,
+      "isLoading": false,
+      "addOnMapInitialisation": false,
+      "metadata": "",
+      "type": "fill",
+      "source": {
+        "type": "geojson",
+        "data": "assets/layers_json/restrictions_boundaryline.geojson"
+      },
+      "paint": {
+        "fill-opacity": 0.8,
+        "fill-color": [
+          "match", ["get", "id"],
+          1, "#008b8f",
+          2, "#724FB4",
+          3, "#E87E4D",
+          4, "#F3C683",
+          5, "#F3C683",
+          6, "#724F64",
+          7, "#7fc5c7",
+          8, "#7fc5c7",
+          9, "#7fc5c7",
+          10, "#7fc5c7",
+          11, "#372E33",
+          12, "#372E33",
+          13, "#595741",
+          14, "#2F4136",
+          15, "#2F4136",
+          16, "#3E5245",
+          17, "#496955",
+          18, "#2B322E",
+          19, "#2B322E",
+          20, "#45453B",
+          21, "#A11A4D",
+          22, "#A11A4D",
+          23, "#CD463E",
+          "white"
+        ]
+      },
+      "legend": {
+        "type": "circle",
+        "styleField": "id",
+        "styleValues": [
+          {
+            "styleFieldValue": 1,
+            "color": "#008b8f",
+            "label": "U-Bahn Trassierung"
+          },
+          {
+            "styleFieldValue": 2,
+            "color": "#724FB4",
+            "label": "Deutsches Hafenmuseum"
+          },
+          {
+            "styleFieldValue": 3,
+            "color": "#E87E4D",
+            "label": "Fahrzeuglager"
+          },
+          {
+            "styleFieldValue": 4,
+            "color": "#F3C683",
+            "label": "Bestandsbau"
+          },
+          {
+            "styleFieldValue": 6,
+            "color": "#724F64",
+            "label": "Liegeplatz Peking"
+          },
+          {
+            "styleFieldValue": 7,
+            "color": "#7fc5c7",
+            "label": "Trassierungsfreihaltung U-Bahn"
+          },
+          {
+            "styleFieldValue": 11,
+            "color": "#372E33",
+            "label": "Hansabrücke"
+          },
+          {
+            "styleFieldValue": 13,
+            "color": "#595741",
+            "label": "Westliche Grenze Brücke Moldauhafen"
+          },
+          {
+            "styleFieldValue": 14,
+            "color": "#2F4136",
+            "label": "Potentielle Elbbrücke"
+          },
+          {
+            "styleFieldValue": 16,
+            "color": "#3E5245",
+            "label": "Zufahrt O'Swaldkai"
+          },
+          {
+            "styleFieldValue": 17,
+            "color": "#496955",
+            "label": "Anschlussbereich"
+          },
+          {
+            "styleFieldValue": 18,
+            "color": "#2B322E",
+            "label": "Sachsenbrücke"
+          },
+          {
+            "styleFieldValue": 20,
+            "color": "#45453B",
+            "label": "Anleger"
+          },
+          {
+            "styleFieldValue": 21,
+            "color": "#A11A4D",
+            "label": "Tschechische Republik"
+          },
+          {
+            "styleFieldValue": 23,
+            "color": "#CD463E",
+            "label": "Projektgebiet"
+          }
+        ],
+        "description": "Restriktionshinweise"
+      }
+    },
+    {
+      "id": "competition_designs",
+      "displayName": "Competition designs",
+      "showInLayerList": true,
+      "loadFromCityIo": false,
+      "isLoading": false,
+      "addOnMapInitialisation": false,
+      "metadata": "",
+      "type": "raster",
+      "source": {
+        "type": "image",
+        "url": "assets/images/competition_designs/adept.jpg",
+        "coordinates": [
+            [9.995038, 53.538371],
+            [10.025104, 53.538371],
+            [10.025104, 53.521603],
+            [9.995038, 53.521603]
+          ]
+      },
+      "groupedLayersData": [
+        {
+          "displayName": "HdM",
+          "id": "design_hdm",
+          "url": "assets/images/competition_designs/hdm.jpg",
+          "propertyToDisplay": "HdM",
+          "legendStyleField":  "HdM",
+          "legendDescription": "Competition design: HdM"
+        },
+        {
+          "displayName": "Vogt",
+          "id": "design_vogt",
+          "url": "assets/images/competition_designs/vogt.jpg",
+          "propertyToDisplay": "vogt",
+          "legendStyleField":  "vogt",
+          "legendDescription": "Competition design: Vogt"
+        }
+      ],
+      "subResults": []
+    },
+    {
+      "id": "noise_result",
+      "displayName": "Noise results",
+      "loadFromCityIo": true,
+      "showInLayerList": true,
+      "isLoading": false,
+      "addOnMapInitialisation": false,
+      "metadata": "",
+      "type": "fill-extrusion",
+      "source": {
+        "type": "geojson",
+        "data": "https://cityio.media.mit.edu/api/table/grasbrook_test/noise_result"
+      },
+      "paint": {
+        "fill-extrusion-height": 0.2,
+        "fill-extrusion-base": 0.25,
+        "fill-extrusion-opacity": 0.8,
+        "fill-extrusion-color": [
+          "match", ["get", "idiso"],
+          0, "#B8D6D1",
+          1, "#CEE4CC",
+          2, "#E2F2BF",
+          3, "#F3C683",
+          4, "#E87E4D",
+          5, "#CD463E",
+          6, "#A11A4D",
+          7, "#75085C",
+          "white"
+        ]
+      },
+      "legend": {
+        "type": "circle",
+        "styleField": "idiso",
+        "styleValues": [{
+            "styleFieldValue": 0,
+            "color": "#B8D6D1",
+            "label": "< 45 dB"
+          },
+          {
+            "styleFieldValue": 1,
+            "color": "#CEE4CC",
+            "label": "45−50 dB"
+          },
+          {
+            "styleFieldValue": 2,
+            "color": "#E2F2BF",
+            "label": "50−55 dB"
+          },
+          {
+            "styleFieldValue": 3,
+            "color": "#F3C683",
+            "label": "55-60 dB"
+          },
+          {
+            "styleFieldValue": 4,
+            "color": "#E87E4D",
+            "label": "60−65 dB"
+          },
+          {
+            "styleFieldValue": 5,
+            "color": "#CD463E",
+            "label": "65−70 dB"
+          },
+          {
+            "styleFieldValue": 6,
+            "color": "#A11A4D",
+            "label": "70−75 dB"
+          },
+          {
+            "styleFieldValue": 7,
+            "color": "#75085C",
+            "label": "> 75 dB"
+          }
+        ],
+        "description": "A visualization of noise from main roads and train tracks surrounding the Grasbrook. The result shown is a isophone map of the day–evening–night noise levels calculated based on the prospective traffic. The utilized method is a 2D analysis.",
+        "credits": [
+          "Visualization: Beate Tomio, coloringnoise.com",
+          "Based on IFSTTAR Noisemap, noise-planet.org"
+        ]
+      }
+    }
+  ]
+}

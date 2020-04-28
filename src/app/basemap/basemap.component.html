@@ -1,0 +1,47 @@
+<div id="map-container" class="map-container">
+  <div class="basemap" id="basemap"></div>
+
+
+  <app-map-setting *ngIf="isShowMenu"
+            (mapSettings)="mapSettingsListener($event)"
+    ></app-map-setting>
+
+
+  <app-chart-menu *ngIf="isShowMenu && isShowChart" [chartToShow]="chartToShow"></app-chart-menu>
+
+  <div *ngIf="isShowMenu" class="modal-container container-left-bottom" style="z-index: 2">
+    <app-legend [layer]="mapLegendLayer" [visible]="mapLegendVisible" (close)="mapLegendVisible = false"></app-legend>
+
+    <app-layer-control
+      [layers]="layers"
+      (toggleLayer)="toggleLayer()"
+      (showInfo)="showMapLegend($event)"
+    >
+    </app-layer-control>
+  </div>
+
+    <app-file-setting *ngIf="isShowMenu"
+                      (mapSettings)="mapSettingsListener($event)"
+    ></app-file-setting>
+
+  <app-edit-menu
+    *ngIf="isEditMenu"
+    [currentCell]="selectedGridCell"
+    style="position: absolute"
+    [style.top.px]="sliderTop"
+    [style.left.px]="sliderLeft"
+    (menuOutput)="handleMenuOutput($event)"
+    (dismissMenu)="hideMenu($event)"
+  >
+  </app-edit-menu>
+
+  <div #featureHoverTooltip
+    class="feature-hover-tooltip"
+    [hidden]="!isShowHoverInfo"
+    [style.top.px]="clientXY.y - 35"
+    [style.left.px]="clientXY.x + 25">
+    <ng-container *ngIf="hoverInfoFeature">
+        <small>{{hoverInfoFeature.properties.name}}</small>
+    </ng-container>
+  </div>
+</div>

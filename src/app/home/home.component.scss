@@ -1,0 +1,157 @@
+@import "../../variables.scss";
+
+#splash-image {
+  background-image: url(/assets/images/gb-splash.jpg);
+
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 0;
+
+  .gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(226, 226, 226, 0)),
+      color-stop(8%, rgba(50, 50, 50, 0)),
+      to(rgba(0, 0, 0, 0.95))
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(226, 226, 226, 0) 0%,
+      rgba(50, 50, 50, 0) 8%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+    bottom: 0;
+    z-index: -10;
+  }
+
+  .content {
+    position: absolute;
+    color: white !important;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    padding-top: 10vw;
+    padding-left: 5vw;
+  }
+
+  .first-header {
+    margin-left: 1vw;
+    font-size: 3vw;
+    font-weight: bold;
+  }
+
+  .second-header {
+    font-size: 10vw;
+    color: white;
+    font-weight: bolder;
+    margin-left: 0.5vw;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .second-bottom {
+    border-bottom: 13px solid white;
+  }
+
+  h1 {
+    font-weight: bolder;
+  }
+
+  .menu {
+    font-size: 1vw;
+    font-family: Helvetica, sans-serif, "Segoe UI", Tahoma, Geneva, Verdana,
+      sans-serif;
+    color: white;
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+
+  .menu a {
+    margin: 1vw;
+    padding: 0.5vw;
+    color: white;
+    border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    border: 0.5px solid #ffffff;
+    cursor: pointer;
+  }
+
+  .imprint-link {
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+
+    a {
+      border: none;
+      color:lightgrey;
+      font-size: 80%;
+    }
+  }
+
+  .loginout {
+    font-size: 5vw;
+  }
+
+  .logout {
+  }
+
+  ::ng-deep.login-dialog {
+    background-color: rgba(255,255,255, 0.9) !important;
+  }
+
+  /*
+    Responsiveness
+  */
+
+  @media screen and (max-width: $screen-sm-width) {
+    .content {
+      padding-top: 60px;
+    }
+
+    .first-header {
+      font-size: 15pt;
+    }
+
+    .second-header {
+      font-size: 70pt;
+      overflow-wrap: break-word;
+    }
+
+    .menu {
+      margin-left: 5px;
+      a {
+        font-size: 20pt;
+        border: 1px solid;
+        padding: 10px !important;
+      }
+    }
+    .imprint-link {
+      position: fixed;
+      right: 40px;
+      bottom: 50px;
+
+      a {
+        border: none;
+        color:lightgrey;
+        font-size: 12px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,97 @@
+@import "../../variables.scss";
+
+#imprint-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+
+
+  .imprint-content {
+    background-color: rgba(0, 0, 0);
+    position: absolute;
+    color: white !important;
+    z-index: 100;
+    width: 100%;
+    padding-top: 2vw;
+    padding-left: 5vw;
+  }
+
+  .first-header {
+    margin-left: 1vw;
+    margin-bottom: 2vw;
+    font-size: 3vw;
+    font-weight: bold;
+  }
+
+  .second-header {
+    font-size: 10vw;
+    color: white;
+    font-weight: bolder;
+    margin-left: 1vw;
+    max-width: 490px;
+    line-height: 1;
+  }
+  .second-bottom {
+    border-bottom: 13px solid white;
+  }
+
+  h1 {
+    font-weight: bolder;
+  }
+
+  .imprint-text {
+    font-size: 1vw;
+    font-family: Helvetica, sans-serif, "Segoe UI", Tahoma, Geneva, Verdana,
+      sans-serif;
+    color: white;
+    margin-top: 5vw;
+    margin-left: 1vw;
+  }
+
+  .imprint-text h3{
+      font-size: 1vw;
+      font-weight: bold;
+      font-family: Helvetica, sans-serif, "Segoe UI", Tahoma, Geneva, Verdana,
+        sans-serif;
+      color: white;
+    }
+
+  .imprint-button a {
+    margin: 1vw;
+    padding: 0.5vw;
+    color: white;
+    border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    border: 0.5px solid #ffffff;
+    cursor: pointer;
+  }
+
+
+  /*
+    Responsiveness
+  */
+
+  @media screen and (max-width: $screen-sm-width) {
+    .content {
+      padding-top: 60px;
+    }
+
+    .first-header {
+      font-size: 15pt;
+    }
+
+    .second-header {
+      font-size: 70pt;
+    }
+
+    .imprint-text {
+      margin-left: 5px;
+    }
+  }
+
+}

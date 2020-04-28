@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Condensed");
+@import "variables.scss";
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family:Roboto Condensed;
+}
+
+.map-control-element {
+  margin: 5px;
+  background-color: $menu-background;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1vw;
+  cursor: pointer;
+  padding: 5px 5px 3px 5px;
+}
+
+::ng-deep snack-bar-container.success-snackbar {
+  background-color: #2196F3 !important;
+}
+
+::ng-deep .error-snackbar {
+  background-color: red !important;
+}
+
+.mat-snack-bar-container {
+  max-width: none !important;
+}

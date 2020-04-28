@@ -1,0 +1,9 @@
+<div id="chart-menu">
+    <div *ngIf="chartToShow === 'kpi_gfa'" class="title">Gross Floor Area (GFA) [m²]</div>
+    <div *ngIf="chartToShow === 'stormwater'" class="title">Stormwater runoff [m³/a]</div>
+    <div class="d3-chart" #chart></div>
+    <div *ngIf="chartToShow === 'stormwater'" class="info">Assuming 0.750 m³/m²·a of expected rain.<br/>Drainage coefficients according to DIN 1986-100:2016-9 (Tabelle 9).</div>
+    <div *ngIf="isLoading" class="footer">Currently loading new data
+        <mat-spinner id="spinner" [diameter]="25"></mat-spinner>
+    </div>
+</div>

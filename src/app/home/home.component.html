@@ -1,0 +1,25 @@
+<div id="splash-image">
+  <div class="content">
+    <div class="first-header">CityScope</div>
+    <div class="second-header">
+      Grasbrook
+    </div>
+
+    <div class="menu" id="menu">
+      <ng-container *ngIf="loginStatus; else loggedOut">
+          <a [routerLink]="['/map']">Editor</a>
+          <a class="logout" (click)="logout()">Logout</a>
+      </ng-container>
+      <ng-template #loggedOut>
+          <a (click)="login()">Login</a>
+      </ng-template>
+      <div class="imprint-link">
+        <a [routerLink]="['/imprint']">Imprint</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="gradient"></div>
+</div>

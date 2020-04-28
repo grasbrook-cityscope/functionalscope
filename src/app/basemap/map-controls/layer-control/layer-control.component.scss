@@ -1,0 +1,79 @@
+.layer-control {
+  padding: 5px !important;
+}
+
+.layer-control .heading {
+  font-size: 130%;
+  font-weight: bold;
+}
+
+.layer-control .nowrap {
+  white-space: nowrap;
+}
+
+.layer-control ul,
+.layer-control label {
+  margin: 0;
+  line-height: 2em;
+  position: relative;
+}
+
+.layer-control li {
+  list-style: none;
+  user-select: none;
+}
+
+.layer-control .icon-info {
+  height: 16px;
+  vertical-align: text-bottom;
+  font-size: 15px;
+  margin-left: 5px;
+  padding-top: 2px;
+}
+
+.layer-control .layer-list {
+  margin-top: 10px;
+  padding-right: 20px;
+  padding-inline-start: 20px;
+}
+
+.layer-control .layer-list .icon-info {
+  position: absolute;
+  top: 0.15em;
+  left: -20px;
+  margin: 0;
+}
+
+.mat-icon-button {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  margin-left: -5px;
+}
+
+.collapse-button {
+  color: black;
+  }
+
+.subresult-menu {
+  padding-left: 5px;
+  display: block;
+}
+
+mat-spinner {
+  float: right;
+  margin-top: 2px;
+}
+
+.mat-button-toggle-group {
+  border: hidden;
+}
+
+.ver-group {
+  flex-direction: column;
+}
+
+.hor-group {
+  flex-direction: row;
+}

@@ -1,0 +1,61 @@
+@import "../../../../variables.scss";
+
+.legend {
+  padding: 10px;
+  margin: 5px;
+  background-color: $menu-background;
+  border-radius: 4px;
+  max-width: 260px;
+  max-height: calc(100vh - 250px);
+  overflow: auto;
+
+  .close {
+    cursor: pointer;
+    i {
+      vertical-align: middle;
+    }
+  }
+  
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  .legend-title {
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .legend-container {
+
+    label {
+      font-size: 80%;
+    }
+
+    small {
+      display: block;
+      font-size: 60%;
+    }
+
+    table.legend-table {
+
+      td {
+        font-size: 70%;
+        padding: 2px;
+
+        &.color-field {
+
+          span {
+            width:1em;
+            height:1em;
+            display:inline-block;
+            margin-right: 5px;
+  
+            &.circle {
+              border-radius: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

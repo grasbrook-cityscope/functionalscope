@@ -1,0 +1,36 @@
+<div class="map-settings-holder">
+  <div (click)="resetMap()" class="map-settings-button reset-button map-control-element"
+       matTooltipPosition="right" matTooltip="Reset position">
+    <i class="material-icons menu-icons white">navigation</i>
+  </div>
+
+  <div (click)="toggleMapMode()" class="map-settings-button toggle-mode-button map-control-element">
+    <i *ngIf="!isTopDownMode" class="material-icons menu-icons white"
+       matTooltipPosition="right" matTooltip="Top view">grid_on</i>
+    <i  *ngIf="isTopDownMode" class="material-icons menu-icons white"
+        matTooltipPosition="right" matTooltip="Top view off">grid_off</i>
+  </div>
+
+  <div *ngIf="isTestUser" (click)="maptasticMode()" class="map-settings-button toggle-mode-button map-control-element">
+    <i class="material-icons menu-icons white"
+       matTooltipPosition="right" matTooltip="Click, SHIFT+SPACE">panorama_horizontal</i>
+  </div>
+
+  <div (click)="fitToGrid()" class="map-settings-button toggle-mode-button map-control-element">
+    <i class="material-icons menu-icons white"
+       matTooltipPosition="right" matTooltip="Fit to grid">zoom_out_map</i>
+  </div>
+
+  <!-- chart names as module result fields in cityIO -->
+  <div (click)="showChart('kpi_gfa')" class="map-settings-button toggle-mode-button map-control-element">
+    <i class="material-icons menu-icons white"
+       matTooltipPosition="right" matTooltip="Show GFA">bar_chart</i>
+  </div>
+  <!-- chart names as module result fields in cityIO -->
+  <!-- todo choose icon -->
+  <div (click)="showChart('stormwater')" class="map-settings-button toggle-mode-button map-control-element">
+    <i class="material-icons menu-icons white"
+       matTooltipPosition="right" matTooltip="Show stormwater results">opacity</i>
+  </div>
+
+</div>

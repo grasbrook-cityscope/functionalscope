@@ -1,0 +1,194 @@
+<div id="cell-menu">
+    <mat-tab-group mat-align-tabs="center" [selectedIndex]="cell.type" (selectedIndexChange)="onChangeSetCellType($event)">
+        <mat-tab label="Tab Housing">
+            <ng-template mat-tab-label>
+                <mat-icon matTooltip="Building">house</mat-icon>
+            </ng-template>
+            <div class="category_header">Building</div>
+            <section class="checkbox-holder">
+                <label style="width: 100%">Number of stories</label>
+                <mat-slider
+                        style="width: 250px"
+                        [max]="20"
+                        [min]="1"
+                        [step]="1"
+                        [(ngModel)]="cell.bld_numLevels"
+                        [thumbLabel]="true"
+                        (change)="onChangeSlider($event)">
+                </mat-slider>
+            </section>
+
+            <mat-form-field [hideRequiredMarker]="true">
+                <mat-label>Ground floor</mat-label>
+                <mat-select [(ngModel)]="cell.bld_useGround"
+                            required
+                            #selectGroundUse>
+                    <mat-option [value]="0">Residential</mat-option>
+                    <mat-option [value]="1">Commercial</mat-option>
+                    <!-- <mat-option [value]="2">Office</mat-option> -->
+                    <mat-option [value]="3">Elementary school</mat-option>
+                    <mat-option [value]="4">Community center</mat-option>
+                    <mat-option [value]="5">Grocery store</mat-option>
+                </mat-select>
+                <mat-error>Please select a building use!</mat-error>
+            </mat-form-field>
+
+            <br />
+
+            <mat-form-field [hideRequiredMarker]="true">
+                <mat-label>Upper floor</mat-label>
+                <mat-select [(ngModel)]="cell.bld_useUpper"
+                            [disabled]="sliderDisabled"
+                            required
+                            #selectUpperUse>
+                    <mat-option [value]="0">Residential</mat-option>
+                    <mat-option [value]="1">Commercial</mat-option>
+                    <!-- <mat-option [value]="2">Office</mat-option> -->
+                    <mat-option [value]="3">Elementary school</mat-option>
+                    <mat-option [value]="4">Community center</mat-option>
+                    <mat-option [value]="5">Grocery store</mat-option>
+                </mat-select>
+                <mat-error>Please select a building use!</mat-error>
+            </mat-form-field>
+        </mat-tab>
+        <mat-tab label="Tab Street">
+            <ng-template mat-tab-label>
+                <mat-icon matTooltip="Street">directions_walk</mat-icon>
+            </ng-template>
+
+            <div class="category_header">Street | Promenade</div>
+
+            <!-- <section class="input-holder">
+                <mat-form-field class="form-field">
+                    <input matInput min=0 [(ngModel)]="cell.str_numLanes" type="number" placeholder="Number of car lanes"> -->
+                    <!-- (change)="onChangeLanes(cell.str_numLanes)"> -->
+                <!-- </mat-form-field>
+            </section> -->
+
+            <!-- <section class="icon-radio-holder">
+                <label>street type</label>
+                <mat-radio-group [(ngModel)]="cell.str_numLanes"
+                                [disabled]="false"> -->
+                    <!-- <mat-radio-button [value]="0"><img #strtypeicon src="assets\images\icons_grasbrook_streets_promenade.svg" alt="alttext" height="30px"/>\xe1\x9a\x80</mat-radio-button>
+                    <mat-radio-button [value]="1"><img #strtypeicon src="assets\images\icons_grasbrook_streets_bike.svg" alt="alttext" height="30px"/> </mat-radio-button>
+                    <mat-radio-button [value]="2"><img #strtypeicon src="assets\images\icons_grasbrook_streets_car.svg" alt="alttext" height="30px"/>  </mat-radio-button> -->
+                    <!-- <mat-radio-button #but1 [value]="0"> </mat-radio-button>
+                    <mat-radio-button #but2 [value]="1">O</mat-radio-button>
+                    <mat-radio-button #but3 [value]="2">.</mat-radio-button>
+                </mat-radio-group>
+            </section> -->
+
+            <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="streettype" (change)="onChangeStrType(streettype)">
+                <mat-button-toggle value="promenade" aria-label="Promenade" matTooltip="Promenade">
+                    <img #strtypeicon src="assets\images\icons_grasbrook_streets_promenade.svg" alt="Promenade" height="30px"/>
+                </mat-button-toggle>
+                <mat-button-toggle value="pedestrian" aria-label="Spielstraße" matTooltip="Living street">
+                    <img #strtypeicon src="assets\images\icons_grasbrook_streets_pedestrian.svg" alt="Spielstraße" height="30px"/>
+                </mat-button-toggle>
+                <mat-button-toggle value="bike" aria-label="Fahrradstraße" matTooltip="Bike street">
+                    <img #strtypeicon src="assets\images\icons_grasbrook_streets_bike.svg" alt="Fahrradstraße" height="30px"/>
+                </mat-button-toggle>
+                <mat-button-toggle value="car" aria-label="Straße" matTooltip="Street">
+                    <img #strtypeicon src="assets\images\icons_grasbrook_streets_car.svg" alt="Straße" height="30px"/>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+
+            <section class="radio-holder">
+                <label>Speed limit</label>
+                <mat-radio-group [(ngModel)]="cell.str_speed"
+                                [disabled]="true">
+                    <mat-radio-button [value]="0">0</mat-radio-button>
+                    <mat-radio-button [value]="7">7</mat-radio-button>
+                    <mat-radio-button [value]="30">30</mat-radio-button>
+                    <mat-radio-button [value]="50">50</mat-radio-button>
+                </mat-radio-group>
+            </section>
+
+            <section class="radio-holder" style="display: none;">
+                <label>Bicycles allowed</label>
+                <mat-radio-group [(ngModel)]="cell.str_bike"
+                                    [disabled]="true">
+                    <mat-radio-button [value]="true"[checked]='true'>Yes</mat-radio-button>
+                    <mat-radio-button [value]="false">No</mat-radio-button>
+                </mat-radio-group>
+            </section>
+
+            <section class="radio-holder">
+                <label>Stairs</label>
+                <mat-radio-group [(ngModel)]="cell.str_stairs"
+                                [disabled]="pedestrianDisabled">
+                    <mat-radio-button [value]="true">Yes</mat-radio-button>
+                    <mat-radio-button [value]="false"[checked]='true'>No</mat-radio-button>
+                </mat-radio-group>
+            </section>
+
+            <section class="radio-holder">
+                <label>Pedestrian ramp</label>
+                <mat-radio-group [(ngModel)]="cell.str_ramp"
+                                [disabled]="pedestrianDisabled">
+                    <mat-radio-button [value]="true">Yes</mat-radio-button>
+                    <mat-radio-button [value]="false"[checked]='true'>No</mat-radio-button>
+                </mat-radio-group>
+            </section>
+
+            <section class="radio-holder">
+                <label>Elevator</label>
+                <mat-radio-group [(ngModel)]="cell.str_elevator"
+                                [disabled]="pedestrianDisabled">
+                    <mat-radio-button [value]="true">Yes</mat-radio-button>
+                    <mat-radio-button [value]="false" [checked]='true'>No</mat-radio-button>
+                </mat-radio-group>
+            </section>
+
+
+        </mat-tab>
+        <mat-tab label="Tab Open space">
+            <div class="category_header">Open space</div>
+            <ng-template mat-tab-label>
+                <mat-icon matTooltip="Open space">local_florist</mat-icon>
+            </ng-template>
+            <mat-form-field [hideRequiredMarker]="true">
+                <mat-label>Open space type</mat-label>
+                <mat-select [(ngModel)]="cell.os_type" required #selectOSType>
+                    <mat-option [value]="0">Green space</mat-option>
+                    <mat-option [value]="1">Plaza</mat-option>
+                    <mat-option [value]="2">Athletic field</mat-option>
+                    <!-- <mat-option [value]="3">Playground</mat-option>
+                    <mat-option [value]="4">Daycare (Kita) playground</mat-option> -->
+                    <!-- <mat-option [value]="5">Schoolyard</mat-option>
+                    <mat-option [value]="6">Exhibition space</mat-option>
+                    <mat-option [value]="7">Recycling center</mat-option> -->
+                    <mat-option [value]="8">Water</mat-option>
+                </mat-select>
+                <mat-error>Please select a type!</mat-error>
+            </mat-form-field>
+        </mat-tab>
+        <mat-tab label="Tab Erase">
+                <div class="category_header">Empty cell</div>
+                <ng-template mat-tab-label>
+                    <mat-icon matTooltip="Erase">delete</mat-icon>
+                </ng-template>
+            </mat-tab>
+    </mat-tab-group>
+
+
+    <div class="bottom-menu">
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <button mat-button (click)="onCancel()">
+                    Cancel
+                </button>
+            </div>
+            <!-- <div class="col-md-4" (click)="onPreview()">
+                <button mat-button>
+                    Preview
+                </button>
+            </div> -->
+            <div class="col-md-6 col-xs-6 button_right" (click)="onSave()">
+                <button style="float: right" mat-button>
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
