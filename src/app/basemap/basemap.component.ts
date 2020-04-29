@@ -20,7 +20,6 @@ import { AppComponent } from "../app.component";
 import { AlertService } from "../services/alert.service";
 import { LocalStorageService } from "../services/local-storage.service";
 import { RestoreMessage } from "../menus/restore-message/restore-message";
-//import { GridCell, BuildingType } from "../entities/cell";
 import { MapFeature, BuildingType } from "../entities/MapFeature";
 import { ResetGridDialog } from "../menus/reset-grid/reset-grid-dialog";
 
@@ -45,7 +44,6 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     mapLegendVisible: boolean;
     layers: CsLayer[] = [];
     intervalMap = {};
-    selectedCellColor = "#00FF00";
 
     // Map config
     center: any;
@@ -58,7 +56,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     popUp: mapboxgl.Popup;
     hoverInfoFeature: any;
     hoverInfoDelay: any;
-    hoverInfoLayers: string[] = ["present_buildings", "restrictions"];
+    hoverInfoLayers: string[] = ["present_buildings", "restrictions"]; // todo: get this from config.json (e.g. "hover" attribute)
 
     initialExtrusionHeight: any = null;
     isShowMenu = true;
@@ -77,7 +75,6 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     isEditMenu = false;
     editableGridLayers = ["design_lower", "design_upper"];
     selectedFeatures = [];
-    selectedGridCell: MapFeature;
     menuOutput: MapFeature;
 
     constructor(
@@ -163,15 +160,8 @@ export class BasemapComponent implements OnInit, AfterViewInit {
             this.map.on("mouseleave", layer, this.hideHoverInfo.bind(this));
         }, this);
 
-        if (this.config.isShowPopUp) {
-            for(let layer of this.editableGridLayers) {
-                this.map.on("mouseenter", layer, this.initPopup);
-                this.map.on("mouseleave", layer, this.removePopUp);
-            }
-        }
-
         this.map.on("error", event => {
-            // console.warn(event);
+            // console.warn(event); // DEBUG
         });
     }
 
@@ -264,12 +254,46 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         this.mapLegendVisible = true;
     }
 
+    private restoreLocalStorageGrid(localStorageGrid) {
+        const { gridLayers, currentSource } = this.getGridSource();
+        // Restore the grid but set the features to unselected stage
+        for (const feature of localStorageGrid["features"]) {
+            if (feature.properties["isSelected"]) {
+                feature.properties["isSelected"] = "false";
+            }
+        }
+        this.setGridSource(gridLayers, currentSource);
+    }
+
+    private getGridSource() {
+        const gridLayers: GeoJSONSource[] = [];
+        for (const layer of this.editableGridLayers) {
+            gridLayers.push(this.map.getSource(layer) as GeoJSONSource);
+        }
+        const currentSource = [];
+        for  (const l of gridLayers) {
+            if (l) {
+                currentSource.push(l["_data"]);
+            } else {
+                currentSource.push(null);
+            }
+        }
+
+        return { gridLayers, currentSource };
+    }
+
+    private setGridSource(gridLayers, currentSource) {
+        for ( let i = 0; i < gridLayers.length; ++i ) {
+            gridLayers[i].setData(currentSource[i]);
+        }
+    }
+
     /*
      *   Handle grid interactions
      */
 
     private addGridInteraction() {
-        let localStorageGrid = this.localStorageService.getGrid();
+        const localStorageGrid = this.localStorageService.getGrid();
         if (localStorageGrid) {
             this._bottomSheet.open(RestoreMessage);
 
@@ -283,31 +307,23 @@ export class BasemapComponent implements OnInit, AfterViewInit {
                     }
                 });
         }
-        for(let layer of this.editableGridLayers) {
-            console.log("add click", layer)
+        for (const layer of this.editableGridLayers) {
             this.map.on("click", layer, this.clickOnGrid);
         }
-        // this.map.on('click', this.clickMenuClose);
         // keyboard event
         this.mapCanvas.addEventListener("keydown", this.keyStrokeOnMap);
 
         // map multi select for logged in users
         this.mapCanvas.addEventListener("mousedown", this.mouseDown, true);
-
-        this.map.on("dragstart", this.removePopUp);
-        this.map.on("zoomstart", this.removePopUp);
     }
 
     private removeGridInteraction() {
-        for(let layer of this.editableGridLayers) {
+        for (let layer of this.editableGridLayers) {
             this.map.off("click", layer, this.clickOnGrid);
         }
         this.map.off("click", this.clickMenuClose);
         // keyboard event
         this.mapCanvas.removeEventListener("keydown", this.keyStrokeOnMap);
-
-        this.map.off("dragstart", this.removePopUp);
-        this.map.off("zoomstart", this.removePopUp);
     }
 
     //
@@ -319,49 +335,16 @@ export class BasemapComponent implements OnInit, AfterViewInit {
             // TODO: we could make this option only available for superusers
             this.toggleMenu();
         }
-    };
-
-    private restoreLocalStorageGrid(localStorageGrid) {
-        let { gridLayers, currentSource } = this.getGridSource();
-        // Restore the grid but set the features to unselected stage
-        for (let feature of localStorageGrid["features"]) {
-            if (feature.properties["isSelected"]) {
-                feature.properties["isSelected"] = "false";
-            }
-        }
-        for (let gridLayer of gridLayers) {
-            gridLayer.setData(localStorageGrid); // TODO
-        }
     }
 
-    private getGridSource() {
-        // TODO: why do we have gridlayers AND currentsource?
-        let gridLayers: GeoJSONSource[] = [];
-        for(let layer of this.editableGridLayers) {
-            gridLayers.push(this.map.getSource(layer) as GeoJSONSource);
-        }
-        let currentSource = [];
-        for  (let l of gridLayers) {
-            if(l) {
-                currentSource.push(l["_data"])
-            } else {
-                currentSource.push(null)
-            }
-        } 
-
-        return { gridLayers, currentSource };
-    }
-
-    private setGridSource(gridLayers, currentSource) {
-        for ( let i = 0; i < gridLayers.length; ++i ) {
-            gridLayers[i].setData(currentSource[i]);
-        }
-    }
+    /*
+    * feature selection
+    */
 
     clickOnGrid = e => {
         let clickedFeatures = e.features; // this could be multiple features from multiple layers!
         this.showFeaturesSelected(clickedFeatures, true);
-    };
+    }
 
     private showFeaturesSelected(clickedFeatures: any[], singleclick: boolean) {
         let { gridLayers, currentSource } = this.getGridSource();
@@ -406,9 +389,8 @@ export class BasemapComponent implements OnInit, AfterViewInit {
 
     private isNewSelectionDifferentType(newSelection: any[]) {
         let featureType = null;
-        for (let selectedId of this.selectedFeatures) {
-            const selectedFeatureType = this.getFeatureById(selectedId)
-                .properties["type"];
+        for (const selectedId of this.selectedFeatures) {
+            const selectedFeatureType = this.getFeatureById(selectedId).properties["type"];
             if (!featureType) {
                 featureType = selectedFeatureType;
             } else if (featureType !== selectedFeatureType) {
@@ -449,7 +431,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
 
         // Capture the first xy coordinates
         this.start = this.mousePos(e);
-    };
+    }
 
     onMouseMove = e => {
         // Capture the ongoing xy coordinates
@@ -474,17 +456,17 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         this.box.style.WebkitTransform = pos;
         this.box.style.width = maxX - minX + "px";
         this.box.style.height = maxY - minY + "px";
-    };
+    }
 
     onMouseUp = e => {
         // Capture xy coordinates
         this.finish([this.start, this.mousePos(e)]);
-    };
+    }
 
     onKeyDown = e => {
         // If the ESC key is pressed
         if (e.keyCode === 27) this.finish(null);
-    };
+    }
 
     finish(bbox) {
         // Remove these events now that finish has been called.
@@ -632,6 +614,10 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         this.alertService.success("Data saved", "");
     }
 
+    /*
+     *  update from/to server
+     */
+
     async updateFromCityIO(field) {
         this.toggleLayerLoading(field);
 
@@ -656,64 +642,22 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         return;
     }
 
+    updateCityIOgridCell(feature) {
+        return;
+    }
+
     /*
      *   Slider menu
      */
 
     private showEditMenu() {
-        if (this.selectedFeatures.length > 1) {
-            // Snackbox warning
-            // Check if features are all the same?
-            console.log("more then one feature selected!",this.selectedFeatures)
-        } else {
-            let feature = this.getFeatureById(this.selectedFeatures[0]);
-            this.selectedGridCell = new MapFeature();
-            MapFeature.fillGridCellByFeature(this.selectedGridCell, feature);
-        }
-
         this.isEditMenu = true;
-
-        // Menu needs to be confirmed or cancelled
-        // this.map.on('click', this.clickMenuClose);
     }
 
     private hideMenu(menuOutput: MapFeature) {
         this.menuOutput = menuOutput;
         this.clickMenuClose(menuOutput);
         this.isEditMenu = false;
-    }
-
-    updateCityIOgridCell(feature) {
-        return;
-        if (!this.cityIOService.table_data) {
-            return;
-        }
-        // get properties of changed features
-        let typeDefinition = MapFeature.featureToTypemap(feature);
-
-        // find or create type in header
-        let header = this.cityIOService.table_data["header"];
-        let typeint = header["mapping"]["type"].findIndex(e => {
-            // TODO: this is a really bad way to compare two objects!
-            const a = JSON.stringify(typeDefinition)
-                .split("")
-                .sort()
-                .join();
-            const b = JSON.stringify(e)
-                .split("")
-                .sort()
-                .join();
-            return a == b;
-        });
-        if (typeint === -1) {
-            // new type
-            typeint = header["mapping"]["type"].length;
-            header["mapping"]["type"][typeint] = typeDefinition;
-            this.cityIOService.pushCityIOdata("header", header);
-        }
-
-        let id = feature["id"];
-        this.cityIOService.pending_changes[id] = [typeint, 0]; // remember change
     }
 
     clickMenuClose = e => {
@@ -743,6 +687,10 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         this.alertService.dismiss();
     }
 
+    /*
+    *   hover over features
+    */
+
     showHoverInfo(e) {
         if (e.features) {
             this.hoverInfoFeature = e.features[0];
@@ -763,47 +711,6 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         clearTimeout(this.hoverInfoDelay);
         this.isShowHoverInfo = false;
     }
-
-    // PopUp
-
-    private createPopUp() {
-        this.popUp = new mapboxgl.Popup({
-            closeButton: false,
-            closeOnClick: true
-        });
-    }
-
-    initPopup = e => {
-        this.createPopUp();
-        const gridCell = new MapFeature();
-        MapFeature.fillGridCellByFeature(gridCell, e.features[0]);
-
-        let description = "<h5> Cell details </h5>";
-        for (let gridCellKey of Object.keys(gridCell)) {
-            description =
-                description +
-                '<span style="width: 100%; float: left">' +
-                gridCellKey +
-                ": " +
-                gridCell[gridCellKey] +
-                " </span>";
-        }
-
-        this.popUp
-            .setLngLat(e.lngLat)
-            .setHTML(description)
-            .addTo(this.map);
-    };
-
-    removePopUp = e => {
-        if (this.popUp) {
-            this.popUp.remove();
-            this.popUp = null;
-        }
-        if (this.isShowHoverInfo) {
-            this.hideHoverInfo();
-        }
-    };
 
     /*
      *   On exit actions
