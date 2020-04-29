@@ -74,7 +74,6 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     isEditMenu = false;
     editableGridLayers = ["design_lower", "design_upper"];
     selectedFeatures = [];
-    menuOutput: MapFeature;
 
     constructor(
         private cityIOService: CityIOService,
@@ -320,7 +319,6 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         for (let layer of this.editableGridLayers) {
             this.map.off("click", layer, this.clickOnGrid);
         }
-        this.map.off("click", this.clickMenuClose);
         // keyboard event
         this.mapCanvas.removeEventListener("keydown", this.keyStrokeOnMap);
     }
@@ -360,10 +358,17 @@ export class BasemapComponent implements OnInit, AfterViewInit {
                             this.selectedFeatures.splice(i, 1);
                         }
                     }
+                    if (this.selectedFeatures.length === 0) {
+                        // no mroe features selected, clear and close editmenu
+                        this.isEditMenu = false;
+                    }
                 } else {
                     // select additional features
                     feature.properties["isSelected"] = "true";
-                    this.selectedFeatures.push(clickedFeature["id"]);
+                    if ( this.selectedFeatures.indexOf(clickedFeature.id) === -1 ) {
+                        // if not selected yet, add this feature to selection
+                        this.selectedFeatures.push(clickedFeature["id"]);
+                    }
                     this.showEditMenu();
                 }
             }
@@ -655,20 +660,17 @@ export class BasemapComponent implements OnInit, AfterViewInit {
 
     private hideMenu(menuOutput: MapFeature) {
         // called from HTML
-        this.menuOutput = menuOutput;
         this.clickMenuClose(menuOutput);
         this.isEditMenu = false;
     }
 
-    clickMenuClose = e => {
+    private clickMenuClose(menuOutput) {
         this.isEditMenu = false;
-        this.map.off("click", this.clickMenuClose);
-        let { gridLayers, currentSource } = this.getGridSource();
-        console.log("clickmenuclose",this.selectedFeatures)
+        const { gridLayers, currentSource } = this.getGridSource();
         for ( const id of this.selectedFeatures) {
             for ( const feature of this.getFeaturesById(id)) {
-                    if (this.menuOutput) {
-                        MapFeature.fillFeatureByGridCell(feature, this.menuOutput);
+                    if (menuOutput) {
+                        MapFeature.fillFeatureByGridCell(feature, menuOutput);
 
                         if (feature.properties["type"] !== BuildingType.building) {
                             feature.properties["height"] = 0;
@@ -681,7 +683,6 @@ export class BasemapComponent implements OnInit, AfterViewInit {
          }
         this.setGridSource(gridLayers, currentSource);
         this.selectedFeatures = [];
-        this.menuOutput = null;
         this.alertService.dismiss();
     }
 
