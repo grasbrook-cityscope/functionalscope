@@ -75,7 +75,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
 
     //Edit menu
     isEditMenu = false;
-    editableGridLayer = "grid";
+    editableGridLayers = ["design_lower", "design_upper"];
     selectedFeatures = [];
     selectedGridCell: MapFeature;
     menuOutput: MapFeature;
@@ -164,8 +164,10 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         }, this);
 
         if (this.config.isShowPopUp) {
-            this.map.on("mouseenter", this.editableGridLayer, this.initPopup);
-            this.map.on("mouseleave", this.editableGridLayer, this.removePopUp);
+            for(let layer of this.editableGridLayers) {
+                this.map.on("mouseenter", layer, this.initPopup);
+                this.map.on("mouseleave", layer, this.removePopUp);
+            }
         }
 
         this.map.on("error", event => {
@@ -194,7 +196,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
             this.map.addLayer(csLayer);
             csLayer.visible = true;
             // Too static - has to go somewhere
-            if (csLayer.id === this.editableGridLayer) {
+            if (this.editableGridLayers.indexOf(csLayer.id) > -1) {
                 this.addGridInteraction();
             }
         }
@@ -217,12 +219,12 @@ export class BasemapComponent implements OnInit, AfterViewInit {
                 } else {
                     this.map.addLayer(layer);
                     // Too static - has to go somewhere
-                    if (layer.id === this.editableGridLayer) {
+                    if (this.editableGridLayers.indexOf(layer.id) > -1) {
                         this.addGridInteraction();
                     }
                 }
             } else if (!layer.visible && this.map.getLayer(layer.id) != null) {
-                if (layer.id === this.editableGridLayer) {
+                if (this.editableGridLayers.indexOf(layer.id) > -1) {
                     this.removeGridInteraction();
                 }
                 this.map.removeLayer(layer.id);
@@ -281,7 +283,10 @@ export class BasemapComponent implements OnInit, AfterViewInit {
                     }
                 });
         }
-        this.map.on("click", this.editableGridLayer, this.clickOnGrid);
+        for(let layer of this.editableGridLayers) {
+            console.log("add click", layer)
+            this.map.on("click", layer, this.clickOnGrid);
+        }
         // this.map.on('click', this.clickMenuClose);
         // keyboard event
         this.mapCanvas.addEventListener("keydown", this.keyStrokeOnMap);
@@ -294,7 +299,9 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     }
 
     private removeGridInteraction() {
-        this.map.off("click", this.editableGridLayer, this.clickOnGrid);
+        for(let layer of this.editableGridLayers) {
+            this.map.off("click", layer, this.clickOnGrid);
+        }
         this.map.off("click", this.clickMenuClose);
         // keyboard event
         this.mapCanvas.removeEventListener("keydown", this.keyStrokeOnMap);
@@ -315,46 +322,63 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     };
 
     private restoreLocalStorageGrid(localStorageGrid) {
-        let { gridLayer, currentSource } = this.getGridSource();
+        let { gridLayers, currentSource } = this.getGridSource();
         // Restore the grid but set the features to unselected stage
         for (let feature of localStorageGrid["features"]) {
             if (feature.properties["isSelected"]) {
-                feature.properties["isSelected"] = false;
-                feature.properties["color"] =
-                    feature.properties["initial-color"];
+                feature.properties["isSelected"] = "false";
             }
         }
-        gridLayer.setData(localStorageGrid);
+        for (let gridLayer of gridLayers) {
+            gridLayer.setData(localStorageGrid); // TODO
+        }
     }
 
     private getGridSource() {
-        let gridLayer: GeoJSONSource = this.map.getSource(
-            this.editableGridLayer
-        ) as GeoJSONSource;
-        let currentSource = gridLayer ? gridLayer["_data"] : null;
+        // TODO: why do we have gridlayers AND currentsource?
+        let gridLayers: GeoJSONSource[] = [];
+        for(let layer of this.editableGridLayers) {
+            gridLayers.push(this.map.getSource(layer) as GeoJSONSource);
+        }
+        let currentSource = [];
+        for  (let l of gridLayers) {
+            if(l) {
+                currentSource.push(l["_data"])
+            } else {
+                currentSource.push(null)
+            }
+        } 
 
-        return { gridLayer, currentSource };
+        return { gridLayers, currentSource };
+    }
+
+    private setGridSource(gridLayers, currentSource) {
+        for ( let i = 0; i < gridLayers.length; ++i ) {
+            gridLayers[i].setData(currentSource[i]);
+        }
     }
 
     clickOnGrid = e => {
-        let clickedFeature = e.features[0];
-        console.log("feature clicked",clickedFeature)
-        this.showFeaturesSelected([clickedFeature]);
-        this.isNewSelectionDifferentType([clickedFeature]);
+        let clickedFeatures = e.features; // this could be multiple features from multiple layers!
+        console.log("features clicked",clickedFeatures)
+        this.showFeaturesSelected(clickedFeatures);
+        this.isNewSelectionDifferentType(clickedFeatures);
     };
 
     private showFeaturesSelected(selectedFeature: any[]) {
-        const { gridLayer, currentSource } = this.getGridSource();
+        let { gridLayers, currentSource } = this.getGridSource();
 
-        if (gridLayer && currentSource) {
+        if (gridLayers && currentSource) {
             for (const clickedFeature of selectedFeature) {
-                for (const feature of currentSource["features"]) {
+                // console.log("showfeature",clickedFeature, currentSource[this.editableGridLayers.indexOf(clickedFeature.layer.id)])
+                for (const feature of currentSource[this.editableGridLayers.indexOf(clickedFeature.layer.id)]["features"]) {
+                    // this could be multiple features from multiple layers!
                     if (feature["id"] === clickedFeature["id"]) {
+                        // console.log("showfeature2",feature)
+                        // todo: we have to find some new way to highlight selected features, since we don't want to manipulate colours in the model
                         if (selectedFeature.length <= 1 && feature.properties["color"] === this.selectedCellColor) {
                             // deselect features on single click only, not with rectangle selection
-                            feature.properties["color"] =
-                                feature.properties["initial-color"];
-                            feature.properties["isSelected"] = false;
+                            feature.properties["isSelected"] = "false";
                             // remove this cell from array
                             for (let i = this.selectedFeatures.length - 1; i >= 0; i--) {
                                 if (this.selectedFeatures[i] === clickedFeature["id"]) {
@@ -363,26 +387,22 @@ export class BasemapComponent implements OnInit, AfterViewInit {
                             }
                         } else {
                             // select additional features
-                            if (feature.properties["color"] !== this.selectedCellColor) {
-                                // don't overwrite stored previous type
-                                feature.properties["initial-color"] = feature.properties["color"];
-                            }
-                            feature.properties["isSelected"] = true;
-                            feature.properties["color"] = this.selectedCellColor;
+                            feature.properties["isSelected"] = "true";
                             this.selectedFeatures.push(clickedFeature["id"]);
                             this.showEditMenu();
                         }
                     }
                 }
-                gridLayer.setData(currentSource);
             }
+            this.setGridSource(gridLayers, currentSource);
             this.isNewSelectionDifferentType(selectedFeature);
         }
     }
 
     private getFeatureById(id: number) {
-        let { gridLayer, currentSource } = this.getGridSource();
-        for (let feature of currentSource["features"]) {
+        let { gridLayers, currentSource } = this.getGridSource();
+        // todo: this should be able to return multiple features!
+        for (let feature of currentSource[0]["features"]) {
             if (feature["id"] === id) {
                 return feature;
             }
@@ -485,7 +505,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         // If bbox exists. use this value as the argument for `queryRenderedFeatures`
         if (bbox) {
             features = this.map.queryRenderedFeatures(bbox, {
-                layers: [this.editableGridLayer]
+                layers: this.editableGridLayers
             });
             if (features.length >= 1000) {
                 return window.alert("Select a smaller number of features");
@@ -639,47 +659,6 @@ export class BasemapComponent implements OnInit, AfterViewInit {
 
     setGridFromCityIOData() {
         return;
-        if (!(this.cityIOService.table_data.grid && this.cityIOService.table_data.header)) {
-            this.alertService.error(
-                "Loading",
-                "Please wait a few seconds for the initial update...",
-                3000
-            );
-            return;
-        }
-        const { gridLayer, currentSource } = this.getGridSource();
-        if (gridLayer && currentSource) {
-            for (const feature of currentSource["features"]) {
-                if (this.cityIOService.table_data["grid"].length <= feature["id"]) {
-                    break;
-                }
-                if (this.cityIOService.table_data["grid"][feature["id"]] == null) {
-                    break;
-                }
-                const typeint = this.cityIOService.table_data["grid"][feature["id"]][0];
-                const typeDict = this.cityIOService.table_data["header"]["mapping"]["type"][typeint];
-
-                MapFeature.fillFeatureByCityIOType(feature, typeDict);
-
-                // Color change has to be done here again!?
-                if (feature.properties["changedTypeColor"]) {
-                    feature.properties["color"] =
-                        feature.properties["changedTypeColor"];
-                    delete feature.properties["changedTypeColor"];
-                } else {
-                    feature.properties["color"] =
-                        feature.properties["initial-color"];
-                    delete feature.properties["changedTypeColor"];
-                }
-                if (feature.properties["type"] !== 0) {
-                    feature.properties["height"] = 0;
-                }
-
-                feature.properties["isSelected"] = false;
-            }
-            gridLayer.setData(currentSource);
-            this.gridInitialised = true;
-        }
     }
 
     /*
@@ -690,6 +669,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         if (this.selectedFeatures.length > 1) {
             // Snackbox warning
             // Check if features are all the same?
+            console.log("more then one feature selected!",this.selectedFeatures)
         } else {
             let feature = this.getFeatureById(this.selectedFeatures[0]);
             this.selectedGridCell = new MapFeature();
@@ -742,40 +722,32 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     }
 
     clickMenuClose = e => {
+        console.log("clickmenuclose")
         this.isEditMenu = false;
         this.map.off("click", this.clickMenuClose);
-        let { gridLayer, currentSource } = this.getGridSource();
-        for (let feature of currentSource["features"]) {
-            if (this.selectedFeatures.indexOf(feature["id"]) > -1) {
-                if (this.menuOutput) {
-                    MapFeature.fillFeatureByGridCell(feature, this.menuOutput);
+        let { gridLayers, currentSource } = this.getGridSource();
+        for(let source of currentSource) {
+            for (let feature of source["features"]) {
+                if (this.selectedFeatures.indexOf(feature["id"]) > -1) {
+                    if (this.menuOutput) {
+                        MapFeature.fillFeatureByGridCell(feature, this.menuOutput);
 
-                    // Color change has to be done here again!?
-                    if (feature.properties["changedTypeColor"]) {
-                        feature.properties["color"] = feature.properties["changedTypeColor"];
-                        delete feature.properties["changedTypeColor"];
-                    } else {
-                        feature.properties["color"] = feature.properties["initial-color"];
-                        delete feature.properties["changedTypeColor"];
-                    }
-                    if (feature.properties["type"] !== BuildingType.building) {
-                        feature.properties["height"] = 0;
-                    }
+                        if (feature.properties["type"] !== BuildingType.building) {
+                            feature.properties["height"] = 0;
+                        }
 
-                    this.updateCityIOgridCell(feature); // update cityIO type mapping
-                } else {
-                    feature.properties["color"] = feature.properties["initial-color"];
+                        this.updateCityIOgridCell(feature); // update cityIO type mapping
+                    }
+                    feature.properties["isSelected"] = "false";
+                    console.log("changed feature",feature)
                 }
-                feature.properties["isSelected"] = false;
-
-                console.log("changed feature",feature)
             }
         }
-        gridLayer.setData(currentSource);
+        this.setGridSource(gridLayers, currentSource);
         this.selectedFeatures = [];
         this.menuOutput = null;
         this.alertService.dismiss();
-    };
+    }
 
     showHoverInfo(e) {
         if (e.features) {

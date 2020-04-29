@@ -36,7 +36,7 @@ export class CityIOService implements OnDestroy {
             catchError(this.handleError('getHashes'))
         ).subscribe();
 
-        this.timer = this.update = interval(10000);
+        this.timer = this.update = interval(100000);
         this.subscription.push(
             this.update.subscribe(() => {
                 this.fetchCityIOdata().subscribe();

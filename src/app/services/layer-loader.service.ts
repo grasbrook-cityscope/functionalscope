@@ -16,11 +16,11 @@ export class LayerLoaderService {
     Array.prototype.push.apply(layers, this.config.layers);
 
     for (let layer of layers) {
-      if (layer.id === "grid") {
+      if (layer.id === "design_lower" || layer.id === "design_upper") {
         let gridLayer = GridLayer.createGridLayer(layer.id);
         layers[layers.indexOf(layer)] = this.castCSLayer(
           gridLayer,
-          "Design area",
+          gridLayer.displayName,
           true
         );
       } else if (layer.groupedLayersData) {

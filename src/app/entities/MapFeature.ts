@@ -30,16 +30,7 @@ enum OpenSpaceType {
 export class MapFeature {
     type = BuildingType.empty;
 
-    str_speed = 0;
-    str_numLanes = 0;
-    str_bike = true;
-    str_stairs = false;
-    str_ramp = false;
-    str_elevator = false;
-
-    os_type = null;
-
-    bld_numLevels = 1;
+    // bld_numLevels = 1;
     bld_useGround = BuildingUse.residential;
     bld_useUpper = BuildingUse.residential;
 
@@ -92,7 +83,7 @@ export class MapFeature {
     }
 
     public static fillFeatureByGridCell(feature, gridCell: MapFeature) {
-        /**  used when setting new properties in editmenu*/
+        /**  used when setting new properties in editmenu */
         console.log("fillfeature",feature,gridCell)
         for (let gridCellKey of Object.keys(gridCell)) {
             if (gridCellKey === 'bld_numLevels') {
@@ -116,7 +107,7 @@ export class MapFeature {
     }
 
     public static fillFeatureByCityIOType(feature, typeDict) {
-        console.log("fillfeaturecityio",feature,typeDict,)
+        console.log("fillfeaturecityio",feature,typeDict)
         for (let gridCellKey of Object.keys(typeDict)) {
             if (gridCellKey === 'bld_numLevels') {
                 feature.properties['height'] = MapFeature.bld_lvl_to_height(typeDict[gridCellKey]);

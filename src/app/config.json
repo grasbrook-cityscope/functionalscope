@@ -45,7 +45,14 @@
       "addOnMapInitialisation": false
     },
     {
-      "id": "grid",
+      "id": "design_lower",
+      "showInLayerList": true,
+      "isLoading": false,
+      "addOnMapInitialisation": true,
+      "loadFromCityIo": false
+    },
+    {
+      "id": "design_upper",
       "showInLayerList": true,
       "isLoading": false,
       "addOnMapInitialisation": true,
