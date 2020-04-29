@@ -664,17 +664,12 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         this.isEditMenu = false;
         const { gridLayers, currentSource } = this.getGridSource();
         for ( const id of this.selectedFeatures) {
+            if (menuOutput) {
+                MapFeature.fillFeaturesByGridCell(this.getFeaturesById(id), menuOutput);
+                // this.updateCityIOgridCell(feature); // update cityIO type mapping
+            }
             for ( const feature of this.getFeaturesById(id)) {
-                    if (menuOutput) {
-                        MapFeature.fillFeatureByGridCell(feature, menuOutput);
-
-                        if (feature.properties["type"] !== BuildingType.building) {
-                            feature.properties["height"] = 0;
-                        }
-
-                        this.updateCityIOgridCell(feature); // update cityIO type mapping
-                    }
-                    feature.properties["isSelected"] = "false";
+                feature.properties["isSelected"] = "false";
             }
          }
         this.setGridSource(gridLayers, currentSource);

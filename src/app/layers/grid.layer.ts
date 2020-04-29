@@ -28,7 +28,7 @@ export class GridLayer {
         "fill-extrusion-color": 
             ["match", ["get", "isSelected"],
               "true", "#00ff00",
-              [ "match", ["get", "GroundFloo"],
+              [ "match", ["get", "Use"],
                 "WO", "#FF6E40",
                 "GE", "#FF5252",
                 "SK", "#40C4FF",
@@ -41,7 +41,7 @@ export class GridLayer {
       },
       legend: {
         type: "rect",
-        styleField: ["GroundFloo"],
+        styleField: ["Use"],
         styleValues: [{
             styleFieldValue: "WO",
             color: "#FF6E40",

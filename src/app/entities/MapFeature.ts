@@ -11,8 +11,7 @@ enum BuildingUse {
     office = "#000000",
     educational = "#40C4FF",
     culture = "#7C4DFF",
-    grocery = "#FF4081",
-    special = "#afafaf"
+    grocery = "#FF4081"
 }
 
 enum OpenSpaceType {
@@ -30,7 +29,7 @@ enum OpenSpaceType {
 export class MapFeature {
     type = BuildingType.empty;
 
-    // bld_numLevels = 1;
+    bld_numLevels = 1;
     bld_useGround = BuildingUse.residential;
     bld_useUpper = BuildingUse.residential;
 
@@ -82,26 +81,34 @@ export class MapFeature {
         return typeDefinition;
     }
 
-    public static fillFeatureByGridCell(feature, gridCell: MapFeature) {
+    public static fillFeaturesByGridCell(features, gridCell: MapFeature) {
         /**  used when setting new properties in editmenu */
-        console.log("fillfeature",feature,gridCell)
-        for (let gridCellKey of Object.keys(gridCell)) {
-            if (gridCellKey === 'bld_numLevels') {
-                feature.properties['height'] = MapFeature.bld_lvl_to_height(gridCell[gridCellKey]);
-            } else if (gridCellKey === 'GroundFloo') {
-                feature.properties[gridCellKey] = gridCell[gridCellKey];
 
-                // building
-                const map = {
-                    WO: BuildingUse.residential,
-                    GE: BuildingUse.commercial,
-                    SK: BuildingUse.special
-                };
-                let color = map[gridCell[gridCellKey]];
+        const map = ["WO","GE","SK","SK","SK","SK"]
 
-                feature.properties['changedTypeColor'] = color;
-            } else {
-                feature.properties[gridCellKey] = gridCell[gridCellKey];
+        for ( const feature of features ) {
+            console.log("fillfeature", feature, gridCell);
+
+            for (let gridCellKey of Object.keys(gridCell)) {
+                if (gridCellKey === 'bld_numLevels') {
+                    if ( "UF_Use" in feature.properties ) {
+                        // ground floor feature
+                        feature.properties['height'] = MapFeature.bld_lvl_to_height(gridCell[gridCellKey]);
+                    }
+                } else if (gridCellKey.startsWith("bld_use")) { // todo: this will be done twice
+                    if ( "GF_Use" in feature.properties ) {
+                        // ground floor feature
+                        feature.properties.Use = map[gridCell.bld_useGround];
+                    } else {
+                        // upper floor feature
+                        feature.properties.Use = map[gridCell.bld_useUpper];
+                    }
+                } else {
+                    feature.properties[gridCellKey] = gridCell[gridCellKey];
+                }
+            }
+            if (feature.properties["type"] !== BuildingType.building) {
+                feature.properties["height"] = 0;
             }
         }
     }
