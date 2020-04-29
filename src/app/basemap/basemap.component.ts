@@ -53,7 +53,6 @@ export class BasemapComponent implements OnInit, AfterViewInit {
 
     // UI
     clientXY: { x: number; y: number } = { x: 0, y: 0 };
-    popUp: mapboxgl.Popup;
     hoverInfoFeature: any;
     hoverInfoDelay: any;
     hoverInfoLayers: string[] = ["present_buildings", "restrictions"]; // todo: get this from config.json (e.g. "hover" attribute)
@@ -71,7 +70,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     current;
     box;
 
-    //Edit menu
+    // Edit menu
     isEditMenu = false;
     editableGridLayers = ["design_lower", "design_upper"];
     selectedFeatures = [];
@@ -347,50 +346,50 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     }
 
     private showFeaturesSelected(clickedFeatures: any[], singleclick: boolean) {
-        let { gridLayers, currentSource } = this.getGridSource();
+        const { gridLayers, currentSource } = this.getGridSource();
 
-        if (gridLayers && currentSource) {
-            for (const clickedFeature of clickedFeatures) {
-                for (const feature of currentSource[this.editableGridLayers.indexOf(clickedFeature.layer.id)]["features"]) {
-                    // this could be multiple features from multiple layers!
-                    if (feature["id"] === clickedFeature["id"]) {
-                        if ( singleclick && clickedFeature.properties["isSelected"] === "true") {
-                            // deselect features on single click only, not with rectangle selection
-                            feature.properties["isSelected"] = "false";
-                            // remove this cell from array
-                            for (let i = this.selectedFeatures.length - 1; i >= 0; i--) {
-                                if (this.selectedFeatures[i] === clickedFeature["id"]) {
-                                    this.selectedFeatures.splice(i, 1);
-                                }
-                            }
-                        } else {
-                            // select additional features
-                            feature.properties["isSelected"] = "true";
-                            this.selectedFeatures.push(clickedFeature["id"]);
-                            this.showEditMenu();
+        for (const clickedFeature of clickedFeatures) {
+            for ( const feature of this.getFeaturesById(clickedFeature.id)) {
+                // this could be multiple features from multiple layers!
+                if ( singleclick && clickedFeature.properties["isSelected"] === "true") {
+                    // deselect features on single click only, not with rectangle selection
+                    feature.properties["isSelected"] = "false";
+                    // remove this cell from array
+                    for (let i = this.selectedFeatures.length - 1; i >= 0; i--) {
+                        if (this.selectedFeatures[i] === clickedFeature["id"]) {
+                            this.selectedFeatures.splice(i, 1);
                         }
                     }
+                } else {
+                    // select additional features
+                    feature.properties["isSelected"] = "true";
+                    this.selectedFeatures.push(clickedFeature["id"]);
+                    this.showEditMenu();
                 }
             }
-            this.setGridSource(gridLayers, currentSource);
-            this.isNewSelectionDifferentType(clickedFeatures);
         }
+        this.setGridSource(gridLayers, currentSource);
+        this.isNewSelectionDifferentType(clickedFeatures);
     }
 
-    private getFeatureById(id: number) {
+    private getFeaturesById(id: number) {
         let { gridLayers, currentSource } = this.getGridSource();
-        // todo: this should be able to return multiple features!
-        for (let feature of currentSource[0]["features"]) {
-            if (feature["id"] === id) {
-                return feature;
+        // this can return multiple features from different layers
+        let found_features = [];
+        for ( const source of currentSource) {
+            for (const feature of source["features"]) {
+                if (feature["id"] === id) {
+                    found_features.push(feature);
+                }
             }
         }
+        return found_features;
     }
 
     private isNewSelectionDifferentType(newSelection: any[]) {
         let featureType = null;
         for (const selectedId of this.selectedFeatures) {
-            const selectedFeatureType = this.getFeatureById(selectedId).properties["type"];
+            const selectedFeatureType = this.getFeaturesById(selectedId)[0].properties["type"]; // todo: this can be multiple features
             if (!featureType) {
                 featureType = selectedFeatureType;
             } else if (featureType !== selectedFeatureType) {
@@ -414,7 +413,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
             e.clientX - rect.left - this.mapCanvas.clientLeft,
             e.clientY - rect.top - this.mapCanvas.clientTop
         );
-    };
+    }
 
     mouseDown = e => {
         // Continue the rest of the function if the shiftkey is pressed.
@@ -655,19 +654,19 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     }
 
     private hideMenu(menuOutput: MapFeature) {
+        // called from HTML
         this.menuOutput = menuOutput;
         this.clickMenuClose(menuOutput);
         this.isEditMenu = false;
     }
 
     clickMenuClose = e => {
-        console.log("clickmenuclose")
         this.isEditMenu = false;
         this.map.off("click", this.clickMenuClose);
         let { gridLayers, currentSource } = this.getGridSource();
-        for(let source of currentSource) {
-            for (let feature of source["features"]) {
-                if (this.selectedFeatures.indexOf(feature["id"]) > -1) {
+        console.log("clickmenuclose",this.selectedFeatures)
+        for ( const id of this.selectedFeatures) {
+            for ( const feature of this.getFeaturesById(id)) {
                     if (this.menuOutput) {
                         MapFeature.fillFeatureByGridCell(feature, this.menuOutput);
 
@@ -678,9 +677,8 @@ export class BasemapComponent implements OnInit, AfterViewInit {
                         this.updateCityIOgridCell(feature); // update cityIO type mapping
                     }
                     feature.properties["isSelected"] = "false";
-                }
             }
-        }
+         }
         this.setGridSource(gridLayers, currentSource);
         this.selectedFeatures = [];
         this.menuOutput = null;
