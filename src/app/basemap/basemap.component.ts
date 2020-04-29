@@ -171,7 +171,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         }
 
         this.map.on("error", event => {
-            console.warn(event);
+            // console.warn(event);
         });
     }
 
@@ -360,23 +360,18 @@ export class BasemapComponent implements OnInit, AfterViewInit {
 
     clickOnGrid = e => {
         let clickedFeatures = e.features; // this could be multiple features from multiple layers!
-        console.log("features clicked",clickedFeatures)
-        this.showFeaturesSelected(clickedFeatures);
-        this.isNewSelectionDifferentType(clickedFeatures);
+        this.showFeaturesSelected(clickedFeatures, true);
     };
 
-    private showFeaturesSelected(selectedFeature: any[]) {
+    private showFeaturesSelected(clickedFeatures: any[], singleclick: boolean) {
         let { gridLayers, currentSource } = this.getGridSource();
 
         if (gridLayers && currentSource) {
-            for (const clickedFeature of selectedFeature) {
-                // console.log("showfeature",clickedFeature, currentSource[this.editableGridLayers.indexOf(clickedFeature.layer.id)])
+            for (const clickedFeature of clickedFeatures) {
                 for (const feature of currentSource[this.editableGridLayers.indexOf(clickedFeature.layer.id)]["features"]) {
                     // this could be multiple features from multiple layers!
                     if (feature["id"] === clickedFeature["id"]) {
-                        // console.log("showfeature2",feature)
-                        // todo: we have to find some new way to highlight selected features, since we don't want to manipulate colours in the model
-                        if (selectedFeature.length <= 1 && feature.properties["color"] === this.selectedCellColor) {
+                        if ( singleclick && clickedFeature.properties["isSelected"] === "true") {
                             // deselect features on single click only, not with rectangle selection
                             feature.properties["isSelected"] = "false";
                             // remove this cell from array
@@ -395,7 +390,7 @@ export class BasemapComponent implements OnInit, AfterViewInit {
                 }
             }
             this.setGridSource(gridLayers, currentSource);
-            this.isNewSelectionDifferentType(selectedFeature);
+            this.isNewSelectionDifferentType(clickedFeatures);
         }
     }
 
@@ -484,7 +479,6 @@ export class BasemapComponent implements OnInit, AfterViewInit {
     onMouseUp = e => {
         // Capture xy coordinates
         this.finish([this.start, this.mousePos(e)]);
-        this.showEditMenu();
     };
 
     onKeyDown = e => {
@@ -510,7 +504,8 @@ export class BasemapComponent implements OnInit, AfterViewInit {
             if (features.length >= 1000) {
                 return window.alert("Select a smaller number of features");
             }
-            this.showFeaturesSelected(features);
+            this.showFeaturesSelected(features, false);
+            this.showEditMenu();
         }
         this.map.dragPan.enable();
     }
@@ -739,7 +734,6 @@ export class BasemapComponent implements OnInit, AfterViewInit {
                         this.updateCityIOgridCell(feature); // update cityIO type mapping
                     }
                     feature.properties["isSelected"] = "false";
-                    console.log("changed feature",feature)
                 }
             }
         }
