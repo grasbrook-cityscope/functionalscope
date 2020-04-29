@@ -658,13 +658,9 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         this.isEditMenu = true;
     }
 
-    private hideMenu(menuOutput: MapFeature) {
+    private closeMenu(menuOutput: MapFeature) {
         // called from HTML
-        this.clickMenuClose(menuOutput);
-        this.isEditMenu = false;
-    }
-
-    private clickMenuClose(menuOutput) {
+        // menuOutput === null means, cancel was pressed, no change
         this.isEditMenu = false;
         const { gridLayers, currentSource } = this.getGridSource();
         for ( const id of this.selectedFeatures) {
