@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, Output, EventEmitter, OnDestroy, ViewChild} from '@angular/core';
-import {MapFeature} from "../../entities/MapFeature";
+import {MapEntity} from "../../entities/MapEntity";
 import { MatSelect } from '@angular/material';
 
 @Component({
@@ -9,13 +9,13 @@ import { MatSelect } from '@angular/material';
 })
 export class EditMenuComponent implements OnInit {
 
-    @Input() currentCell: MapFeature;
-    @Output() menuOutput = new EventEmitter<MapFeature>();
+    @Input() currentCell: MapEntity; // todo: is this needed?
+    @Output() menuOutput = new EventEmitter<MapEntity>();
     @Output() dismissMenu: EventEmitter<any> = new EventEmitter();
     @ViewChild('selectGroundUse', {static: false}) selectGU: MatSelect;
     @ViewChild('selectUpperUse', {static: false}) selectUU: MatSelect;
     @ViewChild('selectOSType', {static: false}) selectOST: MatSelect;
-    cell: MapFeature = new MapFeature();
+    cell: MapEntity = new MapEntity();
     isDismissed = false;
     sliderDisabled = true;
     speedLimitDisabled = true;

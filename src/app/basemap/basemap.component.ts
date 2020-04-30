@@ -20,7 +20,7 @@ import { AppComponent } from "../app.component";
 import { AlertService } from "../services/alert.service";
 import { LocalStorageService } from "../services/local-storage.service";
 import { RestoreMessage } from "../menus/restore-message/restore-message";
-import { MapFeature, BuildingType } from "../entities/MapFeature";
+import { MapEntity } from "../entities/MapEntity";
 import { ResetGridDialog } from "../menus/reset-grid/reset-grid-dialog";
 
 @NgModule({
@@ -658,14 +658,14 @@ export class BasemapComponent implements OnInit, AfterViewInit {
         this.isEditMenu = true;
     }
 
-    private closeMenu(menuOutput: MapFeature) {
+    private closeMenu(menuOutput: MapEntity) {
         // called from HTML
         // menuOutput === null means, cancel was pressed, no change
         this.isEditMenu = false;
         const { gridLayers, currentSource } = this.getGridSource();
         for ( const id of this.selectedFeatures) {
             if (menuOutput) {
-                MapFeature.fillFeaturesByGridCell(this.getFeaturesById(id), menuOutput);
+                MapEntity.fillFeaturesByEntity(this.getFeaturesById(id), menuOutput);
                 // this.updateCityIOgridCell(feature); // update cityIO type mapping
             }
             for ( const feature of this.getFeaturesById(id)) {
