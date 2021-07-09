@@ -275,6 +275,30 @@ export default {
             this.layerChoice_2 = this.layersReadyToCompare[1]
           }
         }
+      },
+      abmStatsMultiLayerAnalysis: {
+        // update criteria layers , if abmStats change. They take a while to calculate,
+        // so displayed data might be missing or outdated.
+        deep: true,
+        handler() {
+          // check if at least to layers are available for analysis
+          if (this.layerChoice_1 === "Abm") {
+            const request = {
+              "layerName": this.criteriaChoice_1.value,
+              "layerRange": this.criteriaChoice_1.range,
+              "layerConstraints": this.sliderValues_1,
+            }
+            this.criteriaLayer_1 = filterAndScaleLayerData(request)
+          }
+          if (this.layerChoice_2 === "Abm") {
+            const request = {
+              "layerName": this.criteriaChoice_2.value,
+              "layerRange": this.criteriaChoice_2.range,
+              "layerConstraints": this.sliderValues_2,
+            }
+            this.criteriaLayer_2 = filterAndScaleLayerData(request)
+          }
+        }
       }
     },
     async beforeMount() {
